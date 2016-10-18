@@ -16,7 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".actividades.ecuacionesUnaVariable.MenuUnaVariable" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.MenuSistemasEcuaciones"></activity>
+        <activity android:name=".actividades.sistemasEcuaciones.MenuSistemasEcuaciones" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.IngresoFunciones" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.ValoresIniciales" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.MenuMetodosIntervalos" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.MenuMetodosAbiertos"></activity>
     </application>
 
 </manifest>

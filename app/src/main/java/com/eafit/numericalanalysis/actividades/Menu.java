@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.MenuSistemasEcuaciones;
+import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.MenuSistemasEcuaciones;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.MenuUnaVariable;
 
 import com.eafit.numericalanalysis.R;
