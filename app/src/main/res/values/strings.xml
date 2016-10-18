@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Numerical Analysis</string>
+    <string name="titulo_menu">Numerical Analysis</string>
+    <string name="una_variable">Ecuaciones de una variable</string>
+    <string name="sistemas_ecuaciones">Sistemas de ecuaciones</string>
+    <string name="salir">Salir</string>
+</resources>
