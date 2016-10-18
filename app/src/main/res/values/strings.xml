@@ -4,4 +4,10 @@
     <string name="una_variable">Ecuaciones de una variable</string>
     <string name="sistemas_ecuaciones">Sistemas de ecuaciones</string>
     <string name="salir">Salir</string>
+
+    <!-- Menu sistemas de ecuaciones -->
+    <string name="entrar_funciones">Entrar funciones</string>
+    <string name="metodos_intervalos">Metodos por intervalos</string>
+    <string name="metodos_abiertos">Metodos abiertos</string>
+    <string name="valores_iniciales">Determinar valores iniciales</string>
 </resources>
