@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Numerical Analysis</string>
     <string name="titulo_menu">Numerical Analysis</string>
-    <string name="una_variable">Ecuaciones de una variable</string>
-    <string name="sistemas_ecuaciones">Sistemas de ecuaciones</string>
+    <string name="una_variable">Ecuaciones De Una Variable</string>
+    <string name="sistemas_ecuaciones">Sistemas De Ecuaciones</string>
     <string name="salir">Salir</string>
 
     <!-- Menu sistemas de ecuaciones -->
@@ -10,4 +10,15 @@
     <string name="metodos_intervalos">Metodos por intervalos</string>
     <string name="metodos_abiertos">Metodos abiertos</string>
     <string name="valores_iniciales">Determinar valores iniciales</string>
+    <!-- Ingreso de funciones -->
+    <string name="funcion_f">f(x)</string>
+    <string name="derivada_f">f\'(x)</string>
+    <string name="derivada2_f">f\'\'(x)</string>
+    <string name="funcion_g">g(x)</string>
+    <string name="hint_f">Ingrese f(x)</string>
+    <string name="hint_g">Ingrese g(x)</string>
+    <string name="hint_derivada_f">Ingrese f\'(x)</string>
+    <string name="hint_derivada2_f">Ingrese f\'\'(x)</string>
+    <string name="guardar">Guardar</string>
+    <string name="limpiar">Limpiar</string>
 </resources>

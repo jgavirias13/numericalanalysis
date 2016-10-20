@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="botonNormal">#84CAEC</color>
+    <color name="botonNormalSombra">#3F8FB6</color>
+    <color name="botonPresionado">#6FD8A0</color>
+    <color name="botonPresionadoSombra">#24A762</color>
+    <color name="botonEnfocado">#FFD54F</color>
+    <color name="botonEnfocadoSombra">#FFCA28</color>
+    <color name="botonDeshabilitado">#DCDDD9</color>
+    <color name="botonDeshabilitadoSombra">#DCDDD2</color>
+    <color name="botonTexto">#FFFFFF</color>
+    <color name="fondo_opaco">#CCFFFFFF</color>
 </resources>

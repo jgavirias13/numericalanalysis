@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.eafit.numericalanalysis.actividades.Menu"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
 
     <TextView
         android:text="@string/titulo_menu"
@@ -14,9 +15,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textSize="36sp"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:layout_weight="1"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:textColor="@color/botonTexto"/>
 
     <Button
         android:text="@string/una_variable"
@@ -24,7 +29,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnUnaVariable"
         android:layout_weight="1"
-        android:onClick="ecuacionesUnaVariable (Menu)" />
+        android:background="@drawable/diseno_boton"
+        android:textColor="@color/botonTexto"/>
 
     <Button
         android:text="@string/sistemas_ecuaciones"
@@ -32,7 +38,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnSistemasEcuaciones"
         android:layout_weight="1"
-        android:onClick="sistemasEcuaciones (Menu)" />
+        android:background="@drawable/diseno_boton"
+        android:textColor="@color/botonTexto"/>
 
     <Button
         android:text="@string/salir"
@@ -40,5 +47,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnSalir"
         android:layout_weight="1"
-        android:onClick="salir (Menu)" />
+        android:background="@drawable/diseno_boton"
+        android:textColor="@color/botonTexto"/>
 </LinearLayout>

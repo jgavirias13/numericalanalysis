@@ -10,12 +10,31 @@ import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.MenuUnaVari
 
 import com.eafit.numericalanalysis.R;
 
-public class Menu extends AppCompatActivity {
+public class Menu extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        findViewById(R.id.btnUnaVariable).setOnClickListener(this);
+        findViewById(R.id.btnSistemasEcuaciones).setOnClickListener(this);
+        findViewById(R.id.btnSalir).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.btnUnaVariable:
+                ecuacionesUnaVariable(view);
+                break;
+            case R.id.btnSistemasEcuaciones:
+                sistemasEcuaciones(view);
+                break;
+            case R.id.btnSalir:
+                salir(view);
+                break;
+        }
     }
 
     public void ecuacionesUnaVariable(View v){

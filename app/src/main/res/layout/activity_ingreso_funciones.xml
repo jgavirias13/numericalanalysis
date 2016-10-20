@@ -8,6 +8,128 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
     tools:context="com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.IngresoFunciones">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:layout_weight="2"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/fondo_opaco">
+
+            <TextView
+                android:text="@string/funcion_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtF"
+                android:hint="@string/hint_f"
+                android:theme="@style/EstiloTextField"
+                />
+
+            <TextView
+                android:text="@string/derivada_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtG"
+                android:hint="@string/hint_derivada_f"
+                android:theme="@style/EstiloTextField"/>
+
+            <TextView
+                android:text="@string/derivada2_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtDF"
+                android:hint="@string/hint_derivada2_f"
+                android:theme="@style/EstiloTextField"/>
+
+            <TextView
+                android:text="@string/funcion_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtD2F"
+                android:hint="@string/hint_g"
+                android:theme="@style/EstiloTextField"/>
+        </GridLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <Button
+                android:text="@string/limpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLimpiar"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/diseno_boton"
+                android:textSize="15sp"
+                android:textColor="@color/botonTexto"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+
+            <Button
+                android:text="@string/guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnGuardar"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/diseno_boton"
+                android:textSize="15sp"
+                android:textColor="@color/botonTexto"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
