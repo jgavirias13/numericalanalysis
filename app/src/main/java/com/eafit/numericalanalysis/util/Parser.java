@@ -1,5 +1,8 @@
 package com.eafit.numericalanalysis.util;
 
+import com.eafit.numericalanalysis.excepciones.ExcepcionEvaluacion;
+import com.eafit.numericalanalysis.excepciones.ExcepcionParser;
+
 import java.util.StringTokenizer;
 import java.util.Stack;
 
@@ -28,15 +31,15 @@ public class Parser
 	private Stack postfixStack;
 	private StringTokenizer str;
 
-	public double getValue(double x){
+	public double getValue(double x) throws ExcepcionParser, ExcepcionEvaluacion {
 		return getValue(x,0,0);
 	}
 
-	public double getValue(double x,double y){
+	public double getValue(double x,double y) throws ExcepcionParser, ExcepcionEvaluacion {
 		return getValue(x,y,0);
 	}
 
-	public double getValue(double x,double y,double z){
+	public double getValue(double x,double y,double z) throws ExcepcionParser, ExcepcionEvaluacion {
 		opStack = new Stack( );
 		postfixStack = new Stack( );
 		str = new StringTokenizer(string,"+*-/^()xyz ",true);
@@ -48,12 +51,11 @@ public class Parser
 			processToken( lastToken );
 		} while( lastToken.getType( ) != EOL );
 		if( postfixStack.isEmpty( ) ){
-			System.err.println( "Error en la funcion: Falta operador" );
-			return 0;
+			throw new ExcepcionParser();
 		}
 		double theResult = postFixTopAndPop( );
 		if( !postfixStack.isEmpty( ) )
-			System.err.println( "Peligro en la funcion: Faltan operandos");
+			throw new ExcepcionParser();
 		return theResult;
 	}
 
@@ -75,8 +77,7 @@ public class Parser
 		return ( (Integer) ( opStack.peek( ) ) ).intValue( );
 	}
 
-	private void processToken( Token lastToken )
-	{
+	private void processToken( Token lastToken ) throws ExcepcionParser, ExcepcionEvaluacion {
 		int topOp;
 		int lastType = lastToken.getType();
 		switch(lastType){
@@ -89,7 +90,7 @@ public class Parser
 			if( topOp == OPAREN )
 				opStack.pop( ); // Get rid of opening parentheseis
 			else
-				System.err.println( "Error en la funcion: Falta parentesis" );
+				throw new ExcepcionParser();
 			break;
 		default: // General operator case
 			int last=(lastType>=FUNCT?FUNCT:lastType);
@@ -102,30 +103,25 @@ public class Parser
 		}
 	}
 
-	private double getTop( )
-	{
+	private double getTop( ) throws ExcepcionParser {
 		if ( postfixStack.isEmpty( ) ){
-			System.err.println( "Error en la funcion: falta operando" );
-			return 0;
+			throw new ExcepcionParser();
 		}
 		return postFixTopAndPop( );
 	}
 
-	private static double pow( double x, double n )
-	{
+	private static double pow( double x, double n ) throws ExcepcionEvaluacion {
 		if( x == 0 ){
 			if( n == 0 )
-				System.err.println( "Error en la funcion: 0^0 no esta definido" );
+				throw new ExcepcionEvaluacion();
 			return 0;
 		}
 		return Math.pow(x,n);
 	}
 
-	private void binaryOp( int topOp ){
+	private void binaryOp( int topOp ) throws ExcepcionParser, ExcepcionEvaluacion {
 		if( topOp == OPAREN ){
-			System.err.println( "Error en la funcion: Parentesis no balanceados");
-			opStack.pop( );
-			return;
+			throw new ExcepcionParser();
 		}
 		if(topOp >= FUNCT ){
 			double d=getTop();
@@ -148,8 +144,7 @@ public class Parser
 			if( rhs != 0 )
 				postfixStack.push( new Double(lhs / rhs) );
 			else{
-				System.err.println( "Error en la funcion: division por cero" );
-				postfixStack.push( new Double( lhs ) );
+				throw new ExcepcionEvaluacion();
 			}
 		opStack.pop();
 	}

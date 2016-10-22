@@ -18,9 +18,11 @@
         <activity android:name=".actividades.ecuacionesUnaVariable.MenuUnaVariable" />
         <activity android:name=".actividades.sistemasEcuaciones.MenuSistemasEcuaciones" />
         <activity android:name=".actividades.ecuacionesUnaVariable.IngresoFunciones" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.ValoresIniciales" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.ValoresIniciales" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.MenuMetodosIntervalos" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.MenuMetodosAbiertos"></activity>
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.MenuMetodosAbiertos" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.Graficar" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.BusquedaIncremental"></activity>
     </application>
 
 </manifest>

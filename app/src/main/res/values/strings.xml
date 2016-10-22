@@ -21,4 +21,14 @@
     <string name="hint_derivada2_f">Ingrese f\'\'(x)</string>
     <string name="guardar">Guardar</string>
     <string name="limpiar">Limpiar</string>
+    <!--Valores inciales -->
+    <string name="graficar">Graficar</string>
+    <string name="busqueda_incremental">Busqueda incremental</string>
+    <string name="descripcion_valores_inciales">
+        A través de estos métodos podrás determinar valores iniciales óptimos para utilizarlos en los métodos que solucionarán la ecuación
+    </string>
+    <string name="error_funcion_f">Error, no se ha ingresado la función f(x)</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="error_texto">Error en </string>
 </resources>

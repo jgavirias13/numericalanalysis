@@ -1,9 +1,15 @@
 package com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.eafit.numericalanalysis.R;
 
@@ -37,8 +43,8 @@ public class IngresoFunciones extends AppCompatActivity implements View.OnClickL
     public void onClick(View view){
         switch(view.getId()){
             case(R.id.btnGuardar):
-                guardarEstado();
-                this.finish();
+                if(guardarEstado())
+                    this.finish();
                 break;
             case(R.id.btnLimpiar):
                 limpiarCampos();
@@ -46,12 +52,44 @@ public class IngresoFunciones extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private void guardarEstado(){
+    private boolean guardarEstado(){
         EstadoFunciones estadoActual = EstadoFunciones.solicitarEstado();
-        estadoActual.setFuncion_f(funcion_f.getText().toString());
-        estadoActual.setFuncion_g(funcion_g.getText().toString());
-        estadoActual.setDerivada_f(derivada_f.getText().toString());
-        estadoActual.setDerivada2_f(derivada2_f.getText().toString());
+        if(!estadoActual.setFuncion_f(funcion_f.getText().toString())){
+            errorFuncion("f(x)");
+            return false;
+        }
+        if(!estadoActual.setFuncion_g(funcion_g.getText().toString())){
+            errorFuncion("g(x)");
+            return false;
+        }
+        if(!estadoActual.setDerivada_f(derivada_f.getText().toString())){
+            errorFuncion("f\'(x)\'");
+            return false;
+        }
+        if(!estadoActual.setDerivada2_f(derivada2_f.getText().toString())){
+            errorFuncion("f\'\'(x)");
+            return false;
+        }
+        return true;
+    }
+
+    private void errorFuncion(String funcion){
+        final Dialog dialog = new Dialog(this, R.style.Theme_Dialog_Translucent);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.error_info);
+
+        Button cancelar = (Button) dialog.findViewById(R.id.btnCancelarInfo);
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        TextView texto = (TextView) dialog.findViewById(R.id.texto_error);
+        Resources res = getResources();
+        texto.setText(res.getText(R.string.error_texto)+" "+funcion);
+
+        dialog.show();
     }
 
     private void limpiarCampos(){

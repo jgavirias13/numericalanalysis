@@ -8,6 +8,7 @@ import android.view.View;
 import com.eafit.numericalanalysis.R;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.MenuMetodosAbiertos;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosIntervalos.MenuMetodosIntervalos;
+import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.valoresIniciales.ValoresIniciales;
 
 public class MenuUnaVariable extends AppCompatActivity implements View.OnClickListener{
 
