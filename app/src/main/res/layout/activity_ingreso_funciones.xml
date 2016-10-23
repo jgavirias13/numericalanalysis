@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
-                android:textSize="18sp"
+                android:textSize="@dimen/texto_formulario"
                 android:textStyle="bold"/>
 
             <EditText
@@ -50,24 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/edtG"
-                android:hint="@string/hint_derivada_f"
-                android:theme="@style/EstiloTextField"/>
-
-            <TextView
-                android:text="@string/derivada2_f"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView4"
-                android:textSize="18sp"
+                android:textSize="@dimen/texto_formulario"
                 android:textStyle="bold" />
 
             <EditText
@@ -76,15 +59,15 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/edtDF"
-                android:hint="@string/hint_derivada2_f"
+                android:hint="@string/hint_derivada_f"
                 android:theme="@style/EstiloTextField"/>
 
             <TextView
-                android:text="@string/funcion_g"
+                android:text="@string/derivada2_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:textSize="18sp"
+                android:id="@+id/textView4"
+                android:textSize="@dimen/texto_formulario"
                 android:textStyle="bold" />
 
             <EditText
@@ -93,6 +76,23 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/edtD2F"
+                android:hint="@string/hint_derivada2_f"
+                android:theme="@style/EstiloTextField"/>
+
+            <TextView
+                android:text="@string/funcion_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtG"
                 android:hint="@string/hint_g"
                 android:theme="@style/EstiloTextField"/>
         </GridLayout>
@@ -111,7 +111,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:background="@drawable/diseno_boton"
-                android:textSize="15sp"
+                android:textSize="@dimen/texto_botones"
                 android:textColor="@color/botonTexto"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp" />
@@ -124,7 +124,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:background="@drawable/diseno_boton"
-                android:textSize="15sp"
+                android:textSize="@dimen/texto_botones"
                 android:textColor="@color/botonTexto"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp" />

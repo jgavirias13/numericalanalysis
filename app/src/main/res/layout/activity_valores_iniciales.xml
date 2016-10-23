@@ -29,7 +29,7 @@
 
         <Button
             android:text="@string/graficar"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnGraficar"
             android:layout_gravity="center"
@@ -40,7 +40,7 @@
 
         <Button
             android:text="@string/busqueda_incremental"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnBusquedaIncremental"
             android:layout_gravity="center"

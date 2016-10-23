@@ -1,8 +1,11 @@
 package com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable;
 
+import com.eafit.numericalanalysis.estructuras.SalidaBusquedasIncrementales;
 import com.eafit.numericalanalysis.excepciones.ExcepcionDelta;
+import com.eafit.numericalanalysis.excepciones.ExcepcionEvaluacion;
 import com.eafit.numericalanalysis.excepciones.ExcepcionFinIntervalo;
 import com.eafit.numericalanalysis.excepciones.ExcepcionIteraciones;
+import com.eafit.numericalanalysis.excepciones.ExcepcionParser;
 import com.eafit.numericalanalysis.util.Intervalo;
 import com.eafit.numericalanalysis.util.Parser;
 import com.eafit.numericalanalysis.util.Impresion;
@@ -16,44 +19,48 @@ public class BusquedasIncrementales {
      *
      * @return String con la salida del metodo
      */
-    public static Intervalo<Double, Double> evaluar(double x0, double delta,
-                                                    int iteraciones,
-                                                    Parser funcionF)
-            throws Exception {
+    public static SalidaBusquedasIncrementales evaluar(double x0, double delta,
+                                                       int iteraciones,
+                                                       Parser funcionF)
+            throws ExcepcionFinIntervalo, ExcepcionDelta, ExcepcionIteraciones, ExcepcionParser, ExcepcionEvaluacion {
+
+        SalidaBusquedasIncrementales salida = new SalidaBusquedasIncrementales();
 
         if (delta == 0)
             throw new ExcepcionDelta();
         if (iteraciones <= 0)
             throw new ExcepcionIteraciones();
-        Impresion.encabezadoBusquedaIncremental();
-        int contador, iter;
+        int contador;
         double y0, y1, x1;
         y0 = funcionF.getValue(x0);
-        Impresion.busquedaIncremental(0, x0, y0);
+        salida.agregar(0, x0, y0);
         if (y0 != 0) {
             x1 = x0 + delta;
             y1 = funcionF.getValue(x1);
             contador = 1;
-            Impresion.busquedaIncremental(contador, x1, y1);
+            salida.agregar(contador, x1, y1);
             while (y0 * y1 > 0 && contador < iteraciones) {
                 x0 = x1;
                 y0 = y1;
                 x1 = x0 + delta;
                 y1 = funcionF.getValue(x1);
                 contador++;
-                Impresion.busquedaIncremental(contador, x1, y1);
+                salida.agregar(contador, x1, y1);
             }
             if (y1 == 0) {
-                return new Intervalo<Double, Double>(x1, x1);
+                salida.setRespuesta(x1,x1);
+                return salida;
             } else {
                 if (y0 * y1 < 0) {
-                    return new Intervalo<Double, Double>(x0, x1);
+                    salida.setRespuesta(x0,x1);
+                    return salida;
                 } else {
                     throw new ExcepcionFinIntervalo();
                 }
             }
         } else {
-            return new Intervalo<Double, Double>(x0, x0);
+            salida.setRespuesta(x0,x0);
+            return salida;
         }
     }
 }

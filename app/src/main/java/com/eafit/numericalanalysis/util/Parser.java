@@ -245,7 +245,7 @@ public class Parser
 			zeta=z;
 		}
 		
-		public Token getToken( ){
+		public Token getToken( ) throws ExcepcionParser {
 			double theValue;
 			if(!str.hasMoreTokens( ))
 				return new Token( );
@@ -266,8 +266,7 @@ public class Parser
 				if(i>=0)
 					return new Token(FUNCT+i);
 				else{
-					System.err.println( "Error en parser" );
-					return new Token();
+					throw new ExcepcionParser();
 				}
 			}
 			try
@@ -276,8 +275,7 @@ public class Parser
 				}
 			catch( NumberFormatException e )
 				{
-					System.err.println( "Error en parser" );
-					return new Token( );
+					throw new ExcepcionParser();
 				}
 			return new Token( VALUE, theValue );
 		}

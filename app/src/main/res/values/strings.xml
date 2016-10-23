@@ -31,4 +31,14 @@
     <string name="ingresar">Ingresar</string>
     <string name="cancelar">Cancelar</string>
     <string name="error_texto">Error en </string>
+    <!--Busquedas Incrementales -->
+    <string name="datos">Datos:</string>
+    <string name="x0">X0</string>
+    <string name="delta">Delta</string>
+    <string name="iteraciones">Iteraciones</string>
+    <string name="calcular">Calcular</string>
+    <string name="solucion">Solucion:</string>
+    <string name="proceso">Mostrar Proceso</string>
+    <string name="respuesta">Respuesta</string>
+    <string name="respuesta_busquedas_raiz">Se encontro raiz en</string>
 </resources>

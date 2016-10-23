@@ -63,7 +63,7 @@ public class IngresoFunciones extends AppCompatActivity implements View.OnClickL
             return false;
         }
         if(!estadoActual.setDerivada_f(derivada_f.getText().toString())){
-            errorFuncion("f\'(x)\'");
+            errorFuncion("f\'(x)");
             return false;
         }
         if(!estadoActual.setDerivada2_f(derivada2_f.getText().toString())){

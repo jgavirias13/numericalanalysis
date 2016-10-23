@@ -3,4 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="texto_descripciones">18sp</dimen>
+    <dimen name="texto_formulario">18sp</dimen>
+    <dimen name="texto_botones">15sp</dimen>
+    <dimen name="texto_subtitulo">20sp</dimen>
 </resources>

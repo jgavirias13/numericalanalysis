@@ -70,7 +70,7 @@ public class EstadoFunciones {
             return true;
         }
         try {
-            new Parser(funcion_f).getValue(0);
+            new Parser(funcion_g).getValue(0);
         } catch (ExcepcionEvaluacion excepcionEvaluacion) {
             this.funcion_g = funcion_g;
             return true;
@@ -87,7 +87,7 @@ public class EstadoFunciones {
             return true;
         }
         try {
-            new Parser(funcion_f).getValue(0);
+            new Parser(derivada_f).getValue(0);
         } catch (ExcepcionEvaluacion excepcionEvaluacion) {
             this.derivada_f = derivada_f;
             return true;
@@ -104,7 +104,7 @@ public class EstadoFunciones {
             return true;
         }
         try {
-            new Parser(funcion_f).getValue(0);
+            new Parser(derivada2_f).getValue(0);
         } catch (ExcepcionEvaluacion excepcionEvaluacion) {
             this.derivada2_f = derivada2_f;
             return true;
