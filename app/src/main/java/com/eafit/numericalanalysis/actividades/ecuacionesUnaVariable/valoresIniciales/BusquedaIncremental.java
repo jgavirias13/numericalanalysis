@@ -1,11 +1,13 @@
 package com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.valoresIniciales;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -69,7 +71,7 @@ public class BusquedaIncremental extends AppCompatActivity implements View.OnCli
         int iteraciones = Integer.parseInt(this.edtIteraciones.getText().toString());
         String funcion = EstadoFunciones.solicitarEstado().getFuncion_f();
         Parser parser = new Parser(funcion);
-
+        Resources res = getResources();
         try {
             SalidaBusquedasIncrementales salida = BusquedasIncrementales.evaluar(x0,delta,iteraciones, parser);
             Comunicacion.send(salida);
@@ -79,20 +81,38 @@ public class BusquedaIncremental extends AppCompatActivity implements View.OnCli
             double x = respuesta.x;
             double y = respuesta.y;
             if(x == y){
-                txtSolucion.setText(resources.getText(R.string.respuesta_busquedas_raiz)+" "+respuesta.x);
+                txtSolucion.setText(resources.getText(R.string.respuesta_busquedas_raiz)+" "+String.format("%.2g",respuesta.x));
             }else{
                 txtSolucion.setText(respuesta.toString());
             }
         } catch (ExcepcionFinIntervalo excepcionFinIntervalo) {
-            excepcionFinIntervalo.printStackTrace();
+            error(res.getString(R.string.error_intervalo));
         } catch (ExcepcionDelta excepcionDelta) {
-            excepcionDelta.printStackTrace();
+            error(res.getString(R.string.error_delta));
         } catch (ExcepcionIteraciones excepcionIteraciones) {
-            excepcionIteraciones.printStackTrace();
+            error(res.getString(R.string.error_iteraciones));
         } catch (ExcepcionParser excepcionParser) {
-            excepcionParser.printStackTrace();
+            error(res.getString(R.string.error_parser));
         } catch (ExcepcionEvaluacion excepcionEvaluacion) {
-            excepcionEvaluacion.printStackTrace();
+            error(res.getString(R.string.error_evaluacion));
         }
+    }
+
+    private void error(String mensaje){
+        final Dialog dialog = new Dialog(this, R.style.Theme_Dialog_Translucent);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.error_info);
+
+        Button cancelar = (Button) dialog.findViewById(R.id.btnCancelarInfo);
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        TextView texto = (TextView) dialog.findViewById(R.id.texto_error);
+        texto.setText(mensaje);
+
+        dialog.show();
     }
 }

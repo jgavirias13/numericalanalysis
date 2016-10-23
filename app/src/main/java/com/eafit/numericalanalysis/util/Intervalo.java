@@ -13,6 +13,6 @@ public class Intervalo<X, Y>{
 	}
 
 	public String toString(){
-		return "["+this.x+", "+this.y+"]";
+		return "["+String.format("%.5g",this.x)+", "+String.format("%.5g",this.y)+"]";
 	}
 }

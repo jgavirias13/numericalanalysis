@@ -41,4 +41,12 @@
     <string name="proceso">Mostrar Proceso</string>
     <string name="respuesta">Respuesta</string>
     <string name="respuesta_busquedas_raiz">Se encontro raiz en</string>
+    <string name="n">n</string>
+    <string name="x1">X1</string>
+    <string name="y0">Y0</string>
+    <string name="error_intervalo">Error, no se encontro ningun intervalo</string>
+    <string name="error_delta">Error, delta debe ser diferente de cero</string>
+    <string name="error_iteraciones">Error, las iteraciones deben ser mayores a cero</string>
+    <string name="error_parser">Error al ejecutar la funcion</string>
+    <string name="error_evaluacion">Error en una operacion de la funcion</string>
 </resources>

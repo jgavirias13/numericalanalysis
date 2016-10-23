@@ -13,8 +13,6 @@ public class Comunicacion {
     }
 
     public static Object receive(){
-        Object aux = objeto;
-        objeto = null;
-        return aux;
+        return objeto;
     }
 }

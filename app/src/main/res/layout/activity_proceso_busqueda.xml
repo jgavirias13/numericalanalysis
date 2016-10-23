@@ -8,6 +8,59 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
     tools:context="com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.valoresIniciales.ProcesoBusqueda">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/formulario">
+
+            <TextView
+                android:text="@string/n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16"
+                android:layout_weight="1"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:text="@string/x0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView15"
+                android:layout_weight="1"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:text="@string/y0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView13"
+                android:layout_weight="1"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/formulario"
+            android:layout_marginTop="10dp"
+            android:id="@+id/listaBusqueda"
+            android:clickable="false"
+            android:contextClickable="false"/>
+    </LinearLayout>
 
 </RelativeLayout>
