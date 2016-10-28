@@ -23,7 +23,9 @@
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.MenuMetodosAbiertos" />
         <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.Graficar" />
         <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.BusquedaIncremental" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.ProcesoBusqueda"></activity>
+        <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.ProcesoBusqueda" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionIngreso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionProceso"></activity>
     </application>
 
 </manifest>

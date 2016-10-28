@@ -13,4 +13,5 @@
     <color name="botonDeshabilitadoSombra">#DCDDD2</color>
     <color name="botonTexto">#FFFFFF</color>
     <color name="fondo_opaco">#CCFFFFFF</color>
+    <color name="color_texto">#515151</color>
 </resources>

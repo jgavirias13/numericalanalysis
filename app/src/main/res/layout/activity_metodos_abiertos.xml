@@ -8,6 +8,45 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
     tools:context="com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.MenuMetodosAbiertos">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="@string/descripcion_metodos_intervalos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:background="@drawable/formulario"
+            android:textSize="@dimen/texto_descripciones"/>
+
+        <Button
+            android:text="@string/biseccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGraficar"
+            android:layout_gravity="center"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:text="@string/regla_falsa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBusquedaIncremental"
+            android:layout_gravity="center"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
 </RelativeLayout>

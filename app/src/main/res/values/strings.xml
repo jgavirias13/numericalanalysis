@@ -44,9 +44,33 @@
     <string name="n">n</string>
     <string name="x1">X1</string>
     <string name="y0">Y0</string>
+
+    <!-- Errores de excepciones -->
     <string name="error_intervalo">Error, no se encontro ningun intervalo</string>
     <string name="error_delta">Error, delta debe ser diferente de cero</string>
     <string name="error_iteraciones">Error, las iteraciones deben ser mayores a cero</string>
     <string name="error_parser">Error al ejecutar la funcion</string>
     <string name="error_evaluacion">Error en una operacion de la funcion</string>
+    <string name="error_tolerancia">Error, la tolerancia debe ser mayor o igual a cero</string>
+    <string name="error_intervalo_malo">Error, no se puede asegurar la existencia de la raiz en el intervalo</string>
+    <string name="error_raiz">Error, no se pudo encontrar una raiz</string>
+
+    <!-- Metodos por intervalos -->
+    <string name="descripcion_metodos_intervalos">
+        Los siguientes son métodos que permiten determinar las raices de una ecuación de una variable, partiendo de un intervalo
+        que contenga una raiz. Son métodos convergentes.
+    </string>
+    <string name="biseccion">Bisección</string>
+    <string name="regla_falsa">Regla Falsa</string>
+    <string name="xi">Xi</string>
+    <string name="xs">Xs</string>
+    <string name="xm">Xm</string>
+    <string name="fxm">f(Xm)</string>
+    <string name="error_absoluto">Error Absoluto</string>
+    <string name="error_relativo">Error Relativo</string>
+    <string name="tolerancia">Tolerancia</string>
+    <string name="respuesta_biseccion">error</string>
+    <string name="error">Error</string>
+    <string name="error_datos">Error, ingrese todos los datos</string>
+
 </resources>

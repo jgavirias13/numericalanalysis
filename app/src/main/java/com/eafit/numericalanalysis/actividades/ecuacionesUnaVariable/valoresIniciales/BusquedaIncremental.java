@@ -66,35 +66,41 @@ public class BusquedaIncremental extends AppCompatActivity implements View.OnCli
     }
 
     private void realizarBusqueda(){
-        double x0 = Double.parseDouble(this.edtX0.getText().toString());
-        double delta = Double.parseDouble(this.edtDelta.getText().toString());
-        int iteraciones = Integer.parseInt(this.edtIteraciones.getText().toString());
-        String funcion = EstadoFunciones.solicitarEstado().getFuncion_f();
-        Parser parser = new Parser(funcion);
         Resources res = getResources();
-        try {
-            SalidaBusquedasIncrementales salida = BusquedasIncrementales.evaluar(x0,delta,iteraciones, parser);
-            Comunicacion.send(salida);
-            Intervalo<Double,Double> respuesta = salida.obtenerRaiz();
-            layoutBusquedas.setVisibility(View.VISIBLE);
-            Resources resources = getResources();
-            double x = respuesta.x;
-            double y = respuesta.y;
-            if(x == y){
-                txtSolucion.setText(resources.getText(R.string.respuesta_busquedas_raiz)+" "+String.format("%.2g",respuesta.x));
-            }else{
-                txtSolucion.setText(respuesta.toString());
+        String edtXOs = this.edtX0.getText().toString();
+        String edtDeltas = this.edtDelta.getText().toString();
+        String edtIteracioness = this.edtIteraciones.getText().toString();
+        if(edtXOs.isEmpty() || edtDeltas.isEmpty() || edtIteracioness.isEmpty())
+            error(res.getString(R.string.error_datos));
+        else {
+            double x0 = Double.parseDouble(edtXOs);
+            double delta = Double.parseDouble(edtDeltas);
+            int iteraciones = Integer.parseInt(edtIteracioness);
+            String funcion = EstadoFunciones.solicitarEstado().getFuncion_f();
+            Parser parser = new Parser(funcion);
+            try {
+                SalidaBusquedasIncrementales salida = BusquedasIncrementales.evaluar(x0, delta, iteraciones, parser);
+                Comunicacion.send(salida);
+                Intervalo<Double, Double> respuesta = salida.obtenerRaiz();
+                layoutBusquedas.setVisibility(View.VISIBLE);
+                double x = respuesta.x;
+                double y = respuesta.y;
+                if (x == y) {
+                    txtSolucion.setText(res.getText(R.string.respuesta_busquedas_raiz) + " " + String.format("%.2g", respuesta.x));
+                } else {
+                    txtSolucion.setText(respuesta.toString());
+                }
+            } catch (ExcepcionFinIntervalo excepcionFinIntervalo) {
+                error(res.getString(R.string.error_intervalo));
+            } catch (ExcepcionDelta excepcionDelta) {
+                error(res.getString(R.string.error_delta));
+            } catch (ExcepcionIteraciones excepcionIteraciones) {
+                error(res.getString(R.string.error_iteraciones));
+            } catch (ExcepcionParser excepcionParser) {
+                error(res.getString(R.string.error_parser));
+            } catch (ExcepcionEvaluacion excepcionEvaluacion) {
+                error(res.getString(R.string.error_evaluacion));
             }
-        } catch (ExcepcionFinIntervalo excepcionFinIntervalo) {
-            error(res.getString(R.string.error_intervalo));
-        } catch (ExcepcionDelta excepcionDelta) {
-            error(res.getString(R.string.error_delta));
-        } catch (ExcepcionIteraciones excepcionIteraciones) {
-            error(res.getString(R.string.error_iteraciones));
-        } catch (ExcepcionParser excepcionParser) {
-            error(res.getString(R.string.error_parser));
-        } catch (ExcepcionEvaluacion excepcionEvaluacion) {
-            error(res.getString(R.string.error_evaluacion));
         }
     }
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBiseccionN"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBiseccionXi"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBiseccionXs"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBiseccionXm"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBiseccionFxm"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBiseccionError"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+
+</LinearLayout>
