@@ -1,7 +1,10 @@
 package com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable;
 
+import com.eafit.numericalanalysis.estructuras.SalidaReglaFalsa;
+import com.eafit.numericalanalysis.excepciones.ExcepcionEvaluacion;
 import com.eafit.numericalanalysis.excepciones.ExcepcionIntervalo;
 import com.eafit.numericalanalysis.excepciones.ExcepcionIteraciones;
+import com.eafit.numericalanalysis.excepciones.ExcepcionParser;
 import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.util.Intervalo;
@@ -26,13 +29,14 @@ public class ReglaFalsa {
      *           iteraciones que se relizaran sobre el intervalo
      * @return void
      */
-    public static Intervalo<Double, Double> evaluar(double xi,
-                                                    double xs,
-                                                    double tol,
-                                                    int iter,
-                                                    Parser funcion,
-                                                    int tipoError)
-            throws Exception {
+    public static SalidaReglaFalsa evaluar(double xi,
+                                                           double xs,
+                                                           double tol,
+                                                           int iter,
+                                                           Parser funcion,
+                                                           int tipoError)
+            throws ExcepcionTolerancia, ExcepcionIteraciones, ExcepcionParser, ExcepcionEvaluacion, ExcepcionIntervalo, ExcepcionRaiz {
+        SalidaReglaFalsa salida = new SalidaReglaFalsa();
         //Comprobar los datos de entrada
         if (tol < 0)
             throw new ExcepcionTolerancia();
@@ -44,10 +48,14 @@ public class ReglaFalsa {
         double fxs = funcion.getValue(xs);
         double xm = 0, fxm = 0, error = 0;
 
-        if (fxi == 0) //Verificar si xi es una raiz
-            return new Intervalo<Double, Double>(xi, 0d);
-        if (fxs == 0) //Verificar si xs es una raiz
-            return new Intervalo<Double, Double>(xs, 0d);
+        if (fxi == 0) { //Verificar si xi es una raiz
+            salida.setRespuesta(xi, 0d);
+            return salida;
+        }
+        if (fxs == 0){ //Verificar si xs es una raiz
+            salida.setRespuesta(xs, 0d);
+            return salida;
+        }
         if (fxi * fxs > 0) // Verificar que existan raices en el intervalo
             throw new ExcepcionIntervalo();
 
@@ -55,8 +63,7 @@ public class ReglaFalsa {
         fxm = funcion.getValue(xm);
         error = tol + 1;
         int cont = 1;
-        Impresion.encabezadoReglaFalsa();
-        Impresion.reglaFalsa(cont, xi, xs, xm, fxm, error);
+        salida.agregar(cont, xi, xs, xm, fxm, error);
         //Mientras no encuentre una raiz
         while (fxm != 0 && error > tol && cont < iter) {
             //Escoger nuevo intervalo
@@ -73,14 +80,16 @@ public class ReglaFalsa {
             xm = xs - fxs * (xi - xs) / (fxi - fxs);
             fxm = funcion.getValue(xm);
             error = Math.abs(xm - aux);
-            if (tipoError == 2) error = Math.abs(error / xm);
+            if (tipoError == 0) error = Math.abs(error / xm);
             cont++;
-            Impresion.reglaFalsa(cont, xi, xs, xm, fxm, error);
+            salida.agregar(cont, xi, xs, xm, fxm, error);
         }
 
         //Evalución de resultados posibles
-        if (fxm == 0 || error <= tol)
-            return new Intervalo<Double, Double>(xm, error);
+        if (fxm == 0 || error <= tol){
+            salida.setRespuesta(xm,error);
+            return salida;
+        }
 
         throw new ExcepcionRaiz();
 

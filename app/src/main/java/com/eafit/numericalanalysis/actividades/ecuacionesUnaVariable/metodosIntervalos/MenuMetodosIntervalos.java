@@ -12,6 +12,7 @@ import com.eafit.numericalanalysis.R;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.EstadoFunciones;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.IngresoFunciones;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionIngreso;
+import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosIntervalos.reglaFalsa.ReglaFalsaIngreso;
 
 public class MenuMetodosIntervalos extends AppCompatActivity implements View.OnClickListener{
 
@@ -40,7 +41,11 @@ public class MenuMetodosIntervalos extends AppCompatActivity implements View.OnC
                 }
                 break;
             case R.id.btnReglaFalsa:
-
+                if(!comprobarFunciones()) error();
+                else{
+                    Intent nuevaActivity = new Intent(this, ReglaFalsaIngreso.class);
+                    startActivity(nuevaActivity);
+                }
                 break;
         }
     }

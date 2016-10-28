@@ -25,7 +25,9 @@
         <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.BusquedaIncremental" />
         <activity android:name=".actividades.ecuacionesUnaVariable.valoresIniciales.ProcesoBusqueda" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionIngreso" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionProceso"></activity>
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionProceso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.reglaFalsa.ReglaFalsaIngreso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.reglaFalsa.ReglaFalsaProceso"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Numerical Analysis</string>
+    <string name="app_name">NumAn</string>
     <string name="titulo_menu">Numerical Analysis</string>
     <string name="una_variable">Ecuaciones De Una Variable</string>
     <string name="sistemas_ecuaciones">Sistemas De Ecuaciones</string>
@@ -70,7 +70,22 @@
     <string name="error_relativo">Error Relativo</string>
     <string name="tolerancia">Tolerancia</string>
     <string name="respuesta_biseccion">error</string>
+    <string name="respuesta_regla_falsa">error</string>
     <string name="error">Error</string>
     <string name="error_datos">Error, ingrese todos los datos</string>
+
+    <!-- Metodos abiertos -->
+    <string name="descripcion_metodos_abiertos">
+        Los siguientes son métodos que permiten determinar las raices de una ecuacion de una variable, estos metodos son rapidos
+        pero no siempre convergen
+    </string>
+    <string name="punto_fijo">Punto Fijo</string>
+    <string name="newton">Newton</string>
+    <string name="secante">Secante</string>
+    <string name="raices_multiples">Raices Multiples</string>
+    <string name="error_punto_fijo">Error, debe de ingresar f(x) y g(x)</string>
+    <string name="error_newton">Error, debe de ingresar f(x) y f\'(x)</string>
+    <string name="error_secante">Error, debe de ingresar f(x)</string>
+    <string name="error_raices_multiples">Error, se debe ingresar f(x), f\'(x) y f\'\'(x)</string>
 
 </resources>
