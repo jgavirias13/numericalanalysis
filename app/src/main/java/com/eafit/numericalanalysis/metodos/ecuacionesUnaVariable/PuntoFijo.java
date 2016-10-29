@@ -1,6 +1,9 @@
 package com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable;
 
+import com.eafit.numericalanalysis.estructuras.SalidaPuntoFijo;
+import com.eafit.numericalanalysis.excepciones.ExcepcionEvaluacion;
 import com.eafit.numericalanalysis.excepciones.ExcepcionIteraciones;
+import com.eafit.numericalanalysis.excepciones.ExcepcionParser;
 import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.util.Intervalo;
@@ -26,14 +29,15 @@ public class PuntoFijo {
      * @param tolerancia  Tolerancia que se busca alcanzar con el resultado
      * @return La raiz aproximada de la funcion encontrada
      */
-    public static Intervalo<Double, Double> evaluar(double x0,
-                                                    double tolerancia,
-                                                    int iteraciones,
-                                                    Parser funcionF,
-                                                    Parser funcionG,
-                                                    int tipoError)
-            throws Exception {
+    public static SalidaPuntoFijo evaluar(double x0,
+                                          double tolerancia,
+                                          int iteraciones,
+                                          Parser funcionF,
+                                          Parser funcionG,
+                                          int tipoError)
+            throws ExcepcionIteraciones, ExcepcionTolerancia, ExcepcionParser, ExcepcionEvaluacion, ExcepcionRaiz {
 
+        SalidaPuntoFijo salida = new SalidaPuntoFijo();
         //Errores de entrada
         if (iteraciones <= 0)
             throw new ExcepcionIteraciones();
@@ -45,19 +49,20 @@ public class PuntoFijo {
         y0 = funcionF.getValue(x0);
         n = 1;
         error = tolerancia + 1;
-        Impresion.encabezadoPuntoFijo();
-        Impresion.puntoFijo(n, x0, y0, error);
+        salida.agregar(n, x0, y0, error);
         while (y0 != 0 && error > tolerancia && n < iteraciones) {
             xm = funcionG.getValue(x0);
             y0 = funcionF.getValue(xm);
             error = Math.abs(xm - x0);
-            if (tipoError == 2) error = Math.abs(error / xm);
+            if (tipoError == 0) error = Math.abs(error / xm);
             x0 = xm;
             n++;
-            Impresion.puntoFijo(n, x0, y0, error);
+            salida.agregar(n, x0, y0, error);
         }
-        if (y0 == 0 || error <= tolerancia)
-            return new Intervalo<Double, Double>(x0, error);
+        if (y0 == 0 || error <= tolerancia) {
+            salida.setRespuesta(x0, error);
+            return salida;
+        }
         throw new ExcepcionRaiz();
     }
 }

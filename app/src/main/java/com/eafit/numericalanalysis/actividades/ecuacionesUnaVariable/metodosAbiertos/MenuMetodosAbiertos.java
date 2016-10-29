@@ -13,6 +13,10 @@ import android.widget.TextView;
 import com.eafit.numericalanalysis.R;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.EstadoFunciones;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.IngresoFunciones;
+import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.newton.NewtonIngreso;
+import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.puntoFijo.PuntoFijoIngreso;
+import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteIngreso;
+import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.PuntoFijo;
 
 public class MenuMetodosAbiertos extends AppCompatActivity implements View.OnClickListener{
 
@@ -44,17 +48,26 @@ public class MenuMetodosAbiertos extends AppCompatActivity implements View.OnCli
                 if(EstadoFunciones.solicitarEstado().getFuncion_f().isEmpty() ||
                         EstadoFunciones.solicitarEstado().getFuncion_g().isEmpty()){
                     error(res.getString(R.string.error_punto_fijo));
+                }else{
+                    Intent nuevaActividad = new Intent(this, PuntoFijoIngreso.class);
+                    startActivity(nuevaActividad);
                 }
                 break;
             case R.id.btnNewton:
                 if(EstadoFunciones.solicitarEstado().getFuncion_f().isEmpty() ||
                         EstadoFunciones.solicitarEstado().getDerivada_f().isEmpty()){
                     error(res.getString(R.string.error_newton));
+                }else{
+                    Intent nuevaActivity = new Intent(this, NewtonIngreso.class);
+                    startActivity(nuevaActivity);
                 }
                 break;
             case R.id.btnSecante:
                 if(EstadoFunciones.solicitarEstado().getFuncion_f().isEmpty()){
                     error(res.getString(R.string.error_secante));
+                }else{
+                    Intent nuevaActivity = new Intent(this, SecanteIngreso.class);
+                    startActivity(nuevaActivity);
                 }
                 break;
             case R.id.btnRaicesMultiples:

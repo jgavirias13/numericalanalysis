@@ -87,5 +87,10 @@
     <string name="error_newton">Error, debe de ingresar f(x) y f\'(x)</string>
     <string name="error_secante">Error, debe de ingresar f(x)</string>
     <string name="error_raices_multiples">Error, se debe ingresar f(x), f\'(x) y f\'\'(x)</string>
+    <string name="respuesta_punto_fijo">error</string>
+    <string name="x">X</string>
+    <string name="fx">f(x)</string>
+    <string name="respueta_newton">error</string>
+    <string name="fdx">f\'(x)</string>
 
 </resources>

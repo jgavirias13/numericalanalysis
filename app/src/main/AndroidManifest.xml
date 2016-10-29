@@ -27,7 +27,13 @@
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionIngreso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.biseccion.BiseccionProceso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.reglaFalsa.ReglaFalsaIngreso" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.reglaFalsa.ReglaFalsaProceso"></activity>
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosIntervalos.reglaFalsa.ReglaFalsaProceso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.puntoFijo.PuntoFijoIngreso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.puntoFijo.PuntoFijoProceso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.newton.NewtonIngreso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.newton.NewtonProceso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteIngreso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteProceso"></activity>
     </application>
 
 </manifest>
