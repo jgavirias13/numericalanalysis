@@ -2,7 +2,10 @@ package com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable;
 
 import java.lang.Exception;
 
+import com.eafit.numericalanalysis.estructuras.SalidaRaicesMultiples;
+import com.eafit.numericalanalysis.excepciones.ExcepcionEvaluacion;
 import com.eafit.numericalanalysis.excepciones.ExcepcionIteraciones;
+import com.eafit.numericalanalysis.excepciones.ExcepcionParser;
 import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.util.Impresion;
@@ -25,14 +28,16 @@ public class RaicesMultiples {
      * @param tolerancia  Tolerancia que se busca alcanzar con el resultado
      * @return La raiz aproximada de la funcion encontrada
      */
-    public static Intervalo<Double, Double> evaluar(double x0,
+    public static SalidaRaicesMultiples evaluar(double x0,
                                                     double tolerancia,
                                                     int iteraciones,
                                                     Parser funcion,
                                                     Parser derivada,
                                                     Parser derivada2,
                                                     int tipoError)
-            throws Exception {
+            throws ExcepcionIteraciones, ExcepcionTolerancia, ExcepcionParser, ExcepcionEvaluacion, ExcepcionRaiz {
+
+        SalidaRaicesMultiples salida = new SalidaRaicesMultiples();
 
         //Errores de entrada
         if (iteraciones <= 0)
@@ -49,8 +54,7 @@ public class RaicesMultiples {
         y02d = derivada2.getValue(x0);
         diferencia = Math.pow(y0d, 2) - y0 * y02d;
 
-        Impresion.encabezadoRaicesMultiples();
-        Impresion.raicesMultiples(n, x0, y0, y0d, y02d, error);
+        salida.agregar(n, x0, y0, y0d, y02d, error);
 
         while (y0 != 0 && error > tolerancia && diferencia != 0 && n < iteraciones) {
             xm = x0 - (y0 * y0d) / diferencia;
@@ -62,10 +66,12 @@ public class RaicesMultiples {
             x0 = xm;
             diferencia = Math.pow(y0d, 2) - y0 * y02d;
             n++;
-            Impresion.raicesMultiples(n, x0, y0, y0d, y02d, error);
+            salida.agregar(n, x0, y0, y0d, y02d, error);
         }
-        if (y0 == 0 || error <= tolerancia)
-            return new Intervalo<Double, Double>(x0, error);
+        if (y0 == 0 || error <= tolerancia) {
+            salida.setRespuesta(x0, error);
+            return salida;
+        }
         throw new ExcepcionRaiz();
     }
 }

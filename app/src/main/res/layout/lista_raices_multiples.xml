@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRaicesMultiplesN"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRaicesMultiplesX"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRaicesMultiplesFX"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRaicesMultiplesDX"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRaicesMultiples2DX"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRaicesMultiplesError"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_formulario"/>
+
+</LinearLayout>

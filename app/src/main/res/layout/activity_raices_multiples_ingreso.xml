@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_raices_multiples_ingreso"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    tools:context="com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesIngreso">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/formulario"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:text="@string/datos"
+            android:textSize="@dimen/texto_subtitulo"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <TextView
+                android:text="@string/x0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:ems="10"
+                android:theme="@style/EstiloTextField"
+                android:id="@+id/edtRaicesMultiplesX0" />
+
+            <TextView
+                android:text="@string/tolerancia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:ems="10"
+                android:theme="@style/EstiloTextField"
+                android:id="@+id/edtRaicesMultiplesTolerancia" />
+
+            <TextView
+                android:text="@string/iteraciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:theme="@style/EstiloTextField"
+                android:id="@+id/edtRaicesMultiplesIteraciones" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:text="@string/error_absoluto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbtnRaicesMultiplesAbsoluto"
+                    android:textColor="@color/color_texto"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:text="@string/error_relativo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbtnRaicesMultiplesRelativo"
+                    android:textColor="@color/color_texto"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+            </RadioGroup>
+
+        </GridLayout>
+
+        <Button
+            android:text="@string/calcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRaicesMultiplesCalcular"
+            android:background="@drawable/diseno_boton"
+            android:textSize="@dimen/texto_botones"
+            android:textColor="@color/botonTexto"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/formulario"
+        android:id="@+id/layoutRaicesMultiples"
+        android:visibility="invisible">
+
+        <TextView
+            android:text="@string/solucion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            android:textSize="@dimen/texto_subtitulo"
+            android:textStyle="italic" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2">
+
+            <TextView
+                android:text="@string/respuesta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:textSize="@dimen/texto_formulario"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtRespuestaRaicesMultiples"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/texto_formulario" />
+        </GridLayout>
+
+        <Button
+            android:text="@string/proceso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRaicesMultiplesProceso"
+            android:background="@drawable/diseno_boton"
+            android:textSize="@dimen/texto_botones"
+            android:textColor="@color/botonTexto"/>
+    </LinearLayout>
+
+</LinearLayout>

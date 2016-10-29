@@ -33,7 +33,9 @@
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.newton.NewtonIngreso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.newton.NewtonProceso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteIngreso" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteProceso"></activity>
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteProceso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesIngreso" />
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesProceso"></activity>
     </application>
 
 </manifest>

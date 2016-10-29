@@ -15,6 +15,7 @@ import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.EstadoFunci
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.IngresoFunciones;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.newton.NewtonIngreso;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.puntoFijo.PuntoFijoIngreso;
+import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesIngreso;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteIngreso;
 import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.PuntoFijo;
 
@@ -75,6 +76,8 @@ public class MenuMetodosAbiertos extends AppCompatActivity implements View.OnCli
                         EstadoFunciones.solicitarEstado().getDerivada_f().isEmpty() ||
                         EstadoFunciones.solicitarEstado().getDerivada2_f().isEmpty()){
                     error(res.getString(R.string.error_raices_multiples));
+                }else{
+                    Intent nuevaActivity = new Intent(this, RaicesMultiplesIngreso.class);
                 }
                 break;
         }

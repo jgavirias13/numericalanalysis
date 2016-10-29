@@ -92,5 +92,6 @@
     <string name="fx">f(x)</string>
     <string name="respueta_newton">error</string>
     <string name="fdx">f\'(x)</string>
+    <string name="f2dx">f\'\'(x)</string>
 
 </resources>
