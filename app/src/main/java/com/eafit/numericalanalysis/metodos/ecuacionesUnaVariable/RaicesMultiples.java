@@ -62,7 +62,7 @@ public class RaicesMultiples {
             y0d = derivada.getValue(xm);
             y02d = derivada2.getValue(xm);
             error = Math.abs(xm - x0);
-            if (tipoError == 2) error = Math.abs(error / xm);
+            if (tipoError == 0) error = Math.abs(error / xm);
             x0 = xm;
             diferencia = Math.pow(y0d, 2) - y0 * y02d;
             n++;

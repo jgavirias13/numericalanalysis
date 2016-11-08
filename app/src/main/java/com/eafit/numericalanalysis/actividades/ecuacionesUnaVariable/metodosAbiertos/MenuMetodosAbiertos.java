@@ -78,6 +78,7 @@ public class MenuMetodosAbiertos extends AppCompatActivity implements View.OnCli
                     error(res.getString(R.string.error_raices_multiples));
                 }else{
                     Intent nuevaActivity = new Intent(this, RaicesMultiplesIngreso.class);
+                    startActivity(nuevaActivity);
                 }
                 break;
         }

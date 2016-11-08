@@ -35,7 +35,8 @@
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteIngreso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteProceso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesIngreso" />
-        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesProceso"></activity>
+        <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesProceso" />
+        <activity android:name=".actividades.sistemasEcuaciones.ingresoEcuaciones.IngresarEcuaciones"></activity>
     </application>
 
 </manifest>

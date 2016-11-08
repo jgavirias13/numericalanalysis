@@ -35,7 +35,7 @@ public class RaicesMultiplesAdapter extends ArrayAdapter {
         TextView txtFx = (TextView) item.findViewById(R.id.txtRaicesMultiplesFX);
         TextView txtFDx = (TextView) item.findViewById(R.id.txtRaicesMultiplesDX);
         TextView txtF2Dx = (TextView) item.findViewById(R.id.txtRaicesMultiples2DX);
-        TextView txtError = (TextView) item.findViewById(R.id.txtNewtonError);
+        TextView txtError = (TextView) item.findViewById(R.id.txtRaicesMultiplesError);
 
         txtN.setText(String.format("%d",datos.get(position).getN()));
         txtX.setText(String.format("%.2g",datos.get(position).getX()));

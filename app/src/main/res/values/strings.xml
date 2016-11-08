@@ -94,4 +94,10 @@
     <string name="fdx">f\'(x)</string>
     <string name="f2dx">f\'\'(x)</string>
 
+
+    <!-- Sistemas de ecuaciones -->
+    <string name="ecuaciones">Entrar ecuaciones</string>
+    <string name="gaussiana">Metodos por Eliminacion Gaussiana</string>
+    <string name="factorizacion">Metodos por Factorizacion</string>
+    <string name="iterativos">Metodos iterativos</string>
 </resources>

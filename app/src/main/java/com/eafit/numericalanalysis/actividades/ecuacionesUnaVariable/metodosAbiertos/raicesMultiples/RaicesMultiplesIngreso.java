@@ -1,6 +1,7 @@
 package com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -117,7 +118,8 @@ public class RaicesMultiplesIngreso extends AppCompatActivity implements View.On
     }
 
     private void realizarProceso(){
-
+        Intent nuevaActivity = new Intent(this, RaicesMultiplesProceso.class);
+        startActivity(nuevaActivity);
     }
 
     private void error(String mensaje){
