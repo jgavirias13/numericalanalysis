@@ -36,7 +36,14 @@
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.secante.SecanteProceso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesIngreso" />
         <activity android:name=".actividades.ecuacionesUnaVariable.metodosAbiertos.raicesMultiples.RaicesMultiplesProceso" />
-        <activity android:name=".actividades.sistemasEcuaciones.ingresoEcuaciones.IngresarEcuaciones"></activity>
+        <activity
+            android:name=".actividades.sistemasEcuaciones.ingresoEcuaciones.IngresoEcuaciones"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.MenuEliminacionGussiana" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.gaussSimple.IngresoGaussSimple" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoParcial.IngresoPivoteoParcial" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoEscalonado.IngresoPivoteoEscalonado" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoTotal.IngresoPivoteoTotal"></activity>
     </application>
 
 </manifest>

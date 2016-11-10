@@ -5,7 +5,8 @@ package com.eafit.numericalanalysis.actividades.sistemasEcuaciones.ingresoEcuaci
  */
 
 public class EstadoEcuaciones {
-    private double[][] ecuaciones;
+    private double[][] a;
+    private double[] b;
     private int nPuntos;
 
     private static EstadoEcuaciones estado;
@@ -21,22 +22,27 @@ public class EstadoEcuaciones {
         return estado;
     }
 
-    public boolean setEcuaciones(double[][] ecuaciones){
-        int n = ecuaciones.length;
+    public boolean setEcuaciones(double[][] a, double[] b){
+        int n = a.length;
         if(n == 0)
             return false;
-        int m = ecuaciones[0].length;
-        if(m == 0)
-            return false;
-        for(int i=0; i<n; i++)
-            for(int j=0; j<m; j++)
-                this.ecuaciones[i][j] = ecuaciones[i][j];
+        this.a = new double[n][n];
+        this.b = new double[n];
+        for(int i=0; i<n; i++) {
+            for (int j = 0; j < n; j++)
+                this.a[i][j] = a[i][j];
+            this.b[i] = b[i];
+        }
         nPuntos = n;
         return true;
     }
 
-    public double[][] getEcuaciones(){
-        return this.ecuaciones;
+    public double[][] getA(){
+        return this.a;
+    }
+
+    public double[] getB(){
+        return this.b;
     }
 
     public int getnPuntos(){

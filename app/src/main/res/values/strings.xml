@@ -100,4 +100,12 @@
     <string name="gaussiana">Metodos por Eliminacion Gaussiana</string>
     <string name="factorizacion">Metodos por Factorizacion</string>
     <string name="iterativos">Metodos iterativos</string>
+    <string name="numero_ecuaciones">Numero de ecuaciones</string>
+    <string name="aceptar">Ok</string>
+    <string name="descripcion_metodos_gaussiana">Los siguientes metodos resuelven el sistema de
+         ecuaciones por medio de eliminiación gaussiana</string>
+    <string name="gauss_simple">Eliminiación Gaussiana simple</string>
+    <string name="pivoteo_parcial">Pivoteo parcial</string>
+    <string name="pivoteo_total">Pivoteo total</string>
+    <string name="pivoteo_escalonado">Pivoteo escalonado</string>
 </resources>

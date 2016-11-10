@@ -6,4 +6,5 @@
     <dimen name="texto_formulario">18sp</dimen>
     <dimen name="texto_botones">15sp</dimen>
     <dimen name="texto_subtitulo">20sp</dimen>
+    <dimen name="espacio_grilla">10dp</dimen>
 </resources>

@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.eafit.numericalanalysis.R;
-import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.ingresoEcuaciones.IngresarEcuaciones;
+import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.ingresoEcuaciones.IngresoEcuaciones;
+import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosEliminacionGaussiana.MenuEliminacionGussiana;
 
 public class MenuSistemasEcuaciones extends AppCompatActivity implements View.OnClickListener{
 
@@ -39,12 +40,13 @@ public class MenuSistemasEcuaciones extends AppCompatActivity implements View.On
     }
 
     private void ingresoEcuaciones(){
-        Intent actividad = new Intent(this, IngresarEcuaciones.class);
+        Intent actividad = new Intent(this, IngresoEcuaciones.class);
         startActivity(actividad);
     }
 
     private void gaussiana(){
-
+        Intent actividad = new Intent(this, MenuEliminacionGussiana.class);
+        startActivity(actividad);
     }
 
     private void factorizacion(){
