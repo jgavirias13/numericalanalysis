@@ -1,11 +1,17 @@
 package com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosEliminacionGaussiana;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.eafit.numericalanalysis.R;
+import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.ingresoEcuaciones.EstadoEcuaciones;
 import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosEliminacionGaussiana.gaussSimple.IngresoGaussSimple;
 import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoEscalonado.IngresoPivoteoEscalonado;
 import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoParcial.IngresoPivoteoParcial;
@@ -28,21 +34,63 @@ public class MenuEliminacionGussiana extends AppCompatActivity implements View.O
         Intent nuevaActivity;
         switch(view.getId()){
             case R.id.btnGaussSimple:
-                nuevaActivity = new Intent(this, IngresoGaussSimple.class);
-                startActivity(nuevaActivity);
+                if(EstadoEcuaciones.solicitarEstado().getA() == null){
+                    Resources res = getResources();
+                    String mensaje = res.getString(R.string.error_matriz);
+                    error(mensaje);
+                }else {
+                    nuevaActivity = new Intent(this, IngresoGaussSimple.class);
+                    startActivity(nuevaActivity);
+                }
                 break;
             case R.id.btnPivoteoParcial:
-                nuevaActivity = new Intent(this, IngresoPivoteoParcial.class);
-                startActivity(nuevaActivity);
-                break;
+                if(EstadoEcuaciones.solicitarEstado().getA() == null){
+                    Resources res = getResources();
+                    String mensaje = res.getString(R.string.error_sistema_no_soluble);
+                    error(mensaje);
+                }else {
+                    nuevaActivity = new Intent(this, IngresoPivoteoParcial.class);
+                    startActivity(nuevaActivity);
+                    break;
+                }
             case R.id.btnPivoteoTotal:
-                nuevaActivity = new Intent(this, IngresoPivoteoTotal.class);
-                startActivity(nuevaActivity);
-                break;
+                if(EstadoEcuaciones.solicitarEstado().getA() == null){
+                    Resources res = getResources();
+                    String mensaje = res.getString(R.string.error_sistema_no_soluble);
+                    error(mensaje);
+                }else {
+                    nuevaActivity = new Intent(this, IngresoPivoteoTotal.class);
+                    startActivity(nuevaActivity);
+                    break;
+                }
             case R.id.btnPivoteoEscalonado:
-                nuevaActivity = new Intent(this, IngresoPivoteoEscalonado.class);
-                startActivity(nuevaActivity);
-                break;
+                if(EstadoEcuaciones.solicitarEstado().getA() == null){
+                    Resources res = getResources();
+                    String mensaje = res.getString(R.string.error_sistema_no_soluble);
+                    error(mensaje);
+                }else {
+                    nuevaActivity = new Intent(this, IngresoPivoteoEscalonado.class);
+                    startActivity(nuevaActivity);
+                    break;
+                }
         }
+    }
+
+    private void error(String mensaje){
+        final Dialog dialog = new Dialog(this, R.style.Theme_Dialog_Translucent);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.error_info);
+
+        Button cancelar = (Button) dialog.findViewById(R.id.btnCancelarInfo);
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        TextView texto = (TextView) dialog.findViewById(R.id.texto_error);
+        texto.setText(mensaje);
+
+        dialog.show();
     }
 }

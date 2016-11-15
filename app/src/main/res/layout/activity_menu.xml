@@ -42,6 +42,15 @@
         android:textColor="@color/botonTexto"/>
 
     <Button
+        android:text="@string/interpolacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnInterpolacion"
+        android:layout_weight="1"
+        android:background="@drawable/diseno_boton"
+        android:textColor="@color/botonTexto"/>
+
+    <Button
         android:text="@string/salir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

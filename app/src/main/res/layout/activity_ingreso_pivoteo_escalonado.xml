@@ -8,6 +8,64 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
     tools:context="com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoEscalonado.IngresoPivoteoEscalonado">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/formulario"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/titulo_matriz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtGaussTitulo"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/texto_subtitulo"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtMatriz"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textSize="@dimen/texto_formulario"/>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:text="@string/calcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalcularGauss"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
 </RelativeLayout>

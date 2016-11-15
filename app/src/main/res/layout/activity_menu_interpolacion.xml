@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu_interpolacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
+    tools:context="com.eafit.numericalanalysis.actividades.interpolacion.MenuInterpolacion">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="@string/interpolacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titulo"
+            android:layout_weight="0"
+            android:textSize="36sp"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:typeface="serif"
+            android:textColor="@color/botonTexto"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:text="@string/puntos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnIngresoPuntos"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp" />
+
+        <Button
+            android:text="@string/newton_interpolacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNewton"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"/>
+
+        <Button
+            android:text="@string/lagrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLagrange"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

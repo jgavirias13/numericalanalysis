@@ -43,7 +43,38 @@
         <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.gaussSimple.IngresoGaussSimple" />
         <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoParcial.IngresoPivoteoParcial" />
         <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoEscalonado.IngresoPivoteoEscalonado" />
-        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoTotal.IngresoPivoteoTotal"></activity>
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoTotal.IngresoPivoteoTotal" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.gaussSimple.ProcesoGaussSimple" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoParcial.ProcesoPivoteoParcial" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoTotal.ProcesoPivoteoTotal" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosEliminacionGaussiana.pivoteoEscalonado.ProcesoPivoteoEscalonado" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.MenuFactorizacion" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionSimple.IngresoFactorizacionSimple" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionPivoteo.IngresoFactorizacionPivoteo" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionDoolittle.IngresoFactorizacionDoolittle" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionCrout.IngresoFactorizacionCrout" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionCholesky.IngresoFactorizacionCholesky" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionSimple.ProcesoFactorizacionSimple" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionPivoteo.ProcesoFactorizacionPivoteo" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionCholesky.ProcesoFactorizacionCholesky" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionCrout.ProcesoFactorizacionCrout" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosFactorizacion.factorizacionDoolittle.ProcesoFactorizacionDoolittle" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosIterativos.MenuIterativos" />
+        <activity
+            android:name=".actividades.sistemasEcuaciones.metodosIterativos.gaussSeidel.IngresoGaussSeidel"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosIterativos.gaussSeidel.ProcesoGaussSeidel" />
+        <activity
+            android:name=".actividades.sistemasEcuaciones.metodosIterativos.jacobi.IngresoJacobi"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".actividades.sistemasEcuaciones.metodosIterativos.jacobi.ProcesoJacobi" />
+        <activity android:name=".actividades.interpolacion.MenuInterpolacion" />
+        <activity
+            android:name=".actividades.interpolacion.ingresoPuntos.IngresoPuntos"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".actividades.interpolacion.newton.IngresoNewton" />
+        <activity android:name=".actividades.interpolacion.lagrange.IngresoLagrange"
+            android:windowSoftInputMode="adjustPan"></activity>
     </application>
 
 </manifest>

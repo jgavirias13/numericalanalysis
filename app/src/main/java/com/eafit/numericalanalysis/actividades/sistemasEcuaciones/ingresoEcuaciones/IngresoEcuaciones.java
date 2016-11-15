@@ -40,7 +40,11 @@ public class IngresoEcuaciones extends AppCompatActivity implements View.OnClick
     public void onClick(View view){
         switch(view.getId()){
             case R.id.btnEcuacionesAceptar:
-                n = Integer.parseInt(editText.getText().toString());
+                try {
+                    n = Integer.parseInt(editText.getText().toString());
+                }catch(java.lang.NumberFormatException e){
+                    n = 3;
+                }
                 ArrayList<Ecuacion> datos = new ArrayList();
                 for(int i = 0; i<n; i++)
                     for(int j = 0; j<n+1; j++)
@@ -61,12 +65,10 @@ public class IngresoEcuaciones extends AppCompatActivity implements View.OnClick
                         for(int j=0; j<n; j++){
                             actual = adapter.getEcuacion(posicionAdapter);
                             a[i][j] = actual.coeficiente;
-                            System.out.println(a[i][j]);
                             posicionAdapter++;
                         }
                         actual = adapter.getEcuacion(posicionAdapter);
                         b[i] = actual.coeficiente;
-                        System.out.println(b[i]);
                         posicionAdapter++;
                     }
                     EstadoEcuaciones.solicitarEstado().setEcuaciones(a,b);

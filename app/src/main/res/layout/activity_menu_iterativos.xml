@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu_iterativos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
+    tools:context="com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosIterativos.MenuIterativos">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="@string/descripcion_metodos_iterativos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:background="@drawable/formulario"
+            android:textSize="@dimen/texto_descripciones"/>
+
+        <Button
+            android:text="@string/gauss_seidel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGaussSeidel"
+            android:layout_gravity="center"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:text="@string/jacobi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnJacobi"
+            android:layout_gravity="center"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+</RelativeLayout>

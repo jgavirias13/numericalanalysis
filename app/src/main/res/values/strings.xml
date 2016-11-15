@@ -108,4 +108,41 @@
     <string name="pivoteo_parcial">Pivoteo parcial</string>
     <string name="pivoteo_total">Pivoteo total</string>
     <string name="pivoteo_escalonado">Pivoteo escalonado</string>
+    <string name="titulo_matriz">Sistema de ecuaciones:</string>
+    <string name="error_matriz">Error, no se ha ingresado el sistema de ecuaciones</string>
+    <string name="error_sistema_no_soluble">Error, el sistema no se puede resolver por este metodo</string>
+    <string name="resultado">Resultado:</string>
+    <string name="anterior">Anterior</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="etapa">Etapa</string>
+    <string name="cambio_fila">Cambio de fila:</string>
+    <string name="cambio_columna">Cambio de columna:</string>
+    <string name="factorizacion_simple">Eliminación gaussiana simple</string>
+    <string name="factorizacion_pivoteo">Eliminación gaussiana con pivoteo</string>
+    <string name="factorizacion_cholesky">Cholesky</string>
+    <string name="factorizacion_crout">Crout</string>
+    <string name="factorizacion_doolittle">Doolittle</string>
+    <string name="descripcion_metodos_factorizacion">Los siguientes metodos resuelven el sistema de
+        ecuaciones factorizando la matriz A en dos matrices L y U</string>
+    <string name="matriz_z">Matriz Z:</string>
+    <string name="error_no_reales">Error, la matriz no tiene solución en los numeros reales por este metodo</string>
+    <string name="lambda">Lambda</string>
+    <string name="descripcion_metodos_iterativos">Los siguientes metodos resuelven el sistema de
+        ecuaciones de forma iterativa dando nuevas aproximaciones</string>
+    <string name="jacobi">Metodo de jacobi</string>
+    <string name="gauss_seidel">Metodo de Gauss Seidel</string>
+
+    <!--Interpolacion -->
+    <string name="interpolacion">Interpolación</string>
+    <string name="puntos">Ingresar puntos</string>
+    <string name="newton_interpolacion">Metodo de Newton</string>
+    <string name="lagrange">Metodo de Lagrange</string>
+    <string name="numero_puntos">Numero de puntos</string>
+    <string name="y">Y</string>
+    <string name="polinomio_interpolante">Poliniomio Interpolante:</string>
+    <string name="proceso_puntos">Proceso:</string>
+    <string name="error_lambda">Error, lambda debe ser un valor mayor a 0</string>
+    <string name="evaluar">Evaluar punto:</string>
+    <string name="calcular_btn">Calcular</string>
+    <string name="error_punto">Error, ingrese el punto</string>
 </resources>

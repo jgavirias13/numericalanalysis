@@ -8,6 +8,8 @@ import android.view.View;
 import com.eafit.numericalanalysis.R;
 import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.ingresoEcuaciones.IngresoEcuaciones;
 import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosEliminacionGaussiana.MenuEliminacionGussiana;
+import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosFactorizacion.MenuFactorizacion;
+import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.metodosIterativos.MenuIterativos;
 
 public class MenuSistemasEcuaciones extends AppCompatActivity implements View.OnClickListener{
 
@@ -50,10 +52,12 @@ public class MenuSistemasEcuaciones extends AppCompatActivity implements View.On
     }
 
     private void factorizacion(){
-
+        Intent actividad = new Intent(this, MenuFactorizacion.class);
+        startActivity(actividad);
     }
 
     private void iterativos(){
-
+        Intent actividad = new Intent(this, MenuIterativos.class);
+        startActivity(actividad);
     }
 }
