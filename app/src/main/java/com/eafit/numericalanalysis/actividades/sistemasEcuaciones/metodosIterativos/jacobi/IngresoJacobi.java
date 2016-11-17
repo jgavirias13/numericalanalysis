@@ -23,6 +23,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.metodos.sistemasEcuaciones.GaussSeidel;
 import com.eafit.numericalanalysis.metodos.sistemasEcuaciones.Jacobi;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 
 import java.util.ArrayList;
 
@@ -40,6 +41,7 @@ public class IngresoJacobi extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_ingreso_jacobi);
         findViewById(R.id.btnCalcular).setOnClickListener(this);
         findViewById(R.id.btnProceso).setOnClickListener(this);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
         listaValores = (ListView) findViewById(R.id.listValores);
         edtIteraciones = (EditText) findViewById(R.id.edtIteraciones);
@@ -98,6 +100,11 @@ public class IngresoJacobi extends AppCompatActivity implements View.OnClickList
             case R.id.btnProceso:
                 Intent proceso = new Intent(this, ProcesoGaussSeidel.class);
                 startActivity(proceso);
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_jacobi);
+                startActivity(help);
                 break;
         }
     }

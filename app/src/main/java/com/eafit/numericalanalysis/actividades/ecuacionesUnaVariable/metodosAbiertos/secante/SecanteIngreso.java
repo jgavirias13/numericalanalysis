@@ -24,6 +24,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.Secante;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 import com.eafit.numericalanalysis.util.Intervalo;
 import com.eafit.numericalanalysis.util.Parser;
 
@@ -44,6 +45,7 @@ public class SecanteIngreso extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secante_ingreso);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
         rbtnErrorAbsoluto = (RadioButton) findViewById(R.id.rbtnSecanteAbsoluto);
         rbtnErrorRelativo = (RadioButton) findViewById(R.id.rbtnSecanteRelativo);
@@ -67,6 +69,11 @@ public class SecanteIngreso extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.btnSecanteProceso:
                 realizarProceso();
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_secante);
+                startActivity(help);
                 break;
         }
     }

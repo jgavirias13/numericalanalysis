@@ -1,15 +1,18 @@
 package com.eafit.numericalanalysis.actividades.interpolacion.newton;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.eafit.numericalanalysis.R;
 import com.eafit.numericalanalysis.actividades.interpolacion.ingresoPuntos.EstadoPuntos;
 import com.eafit.numericalanalysis.estructuras.SalidaNewtonInterpolacion;
 import com.eafit.numericalanalysis.metodos.interpolacion.Newton;
+import com.eafit.numericalanalysis.util.Help;
 
-public class IngresoNewton extends AppCompatActivity {
+public class IngresoNewton extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,7 @@ public class IngresoNewton extends AppCompatActivity {
         TextView txtRespuesta = (TextView) findViewById(R.id.txtRespuesta);
         TextView txtProceso = (TextView) findViewById(R.id.txtProceso);
         EstadoPuntos estado = EstadoPuntos.solicitarEstado();
+        findViewById(R.id.btnHelp).setOnClickListener(this);
         double x[] = new double[estado.getnPuntos()];
         double y[] = new double[estado.getnPuntos()];
         for(int i=0; i<estado.getnPuntos(); i++){
@@ -43,5 +47,11 @@ public class IngresoNewton extends AppCompatActivity {
             proceso +="\n\n";
         }
         txtProceso.setText(proceso);
+    }
+
+    public void onClick(View view){
+        Intent help = new Intent(this, Help.class);
+        help.putExtra("id", R.string.help_newton_interpolacion);
+        startActivity(help);
     }
 }

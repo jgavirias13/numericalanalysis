@@ -32,71 +32,57 @@
             android:typeface="serif"
             android:textColor="@color/botonTexto"/>
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="@string/ecuaciones"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:id="@+id/btnIngresoEcuaciones"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp" />
 
-            <Button
-                android:text="@string/ecuaciones"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnIngresoEcuaciones"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp" />
-
-            <Button
-                android:text="@string/gaussiana"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnGaussiana"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_marginTop="1dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="@string/gaussiana"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGaussiana"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"/>
 
-            <Button
-                android:text="@string/factorizacion"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnFactorizacion"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"/>
+        <Button
+            android:text="@string/factorizacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnFactorizacion"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
 
-            <Button
-                android:text="@string/iterativos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnIterativos"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"/>
+        <Button
+            android:text="@string/iterativos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnIterativos"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
 
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

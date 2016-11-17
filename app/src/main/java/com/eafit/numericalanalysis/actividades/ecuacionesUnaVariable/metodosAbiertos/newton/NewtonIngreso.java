@@ -23,6 +23,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.Newton;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 import com.eafit.numericalanalysis.util.Intervalo;
 import com.eafit.numericalanalysis.util.Parser;
 
@@ -42,6 +43,7 @@ public class NewtonIngreso extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newton_ingreso);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
         rbtnErrorAbsoluto = (RadioButton) findViewById(R.id.rbtnNewtonAbsoluto);
         rbtnErrorRelativo = (RadioButton) findViewById(R.id.rbtnNewtonRelativo);
@@ -64,6 +66,11 @@ public class NewtonIngreso extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btnNewtonProceso:
                 realizarProceso();
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_newton);
+                startActivity(help);
                 break;
         }
     }

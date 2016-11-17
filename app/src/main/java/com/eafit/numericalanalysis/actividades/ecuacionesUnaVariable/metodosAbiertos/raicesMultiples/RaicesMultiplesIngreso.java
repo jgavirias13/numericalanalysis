@@ -23,6 +23,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.RaicesMultiples;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 import com.eafit.numericalanalysis.util.Intervalo;
 import com.eafit.numericalanalysis.util.Parser;
 
@@ -42,7 +43,7 @@ public class RaicesMultiplesIngreso extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raices_multiples_ingreso);
-
+        findViewById(R.id.btnHelp).setOnClickListener(this);
         rbtnErrorAbsoluto = (RadioButton) findViewById(R.id.rbtnRaicesMultiplesAbsoluto);
         rbtnErrorRelativo = (RadioButton) findViewById(R.id.rbtnRaicesMultiplesRelativo);
         edtX0 = (EditText) findViewById(R.id.edtRaicesMultiplesX0);
@@ -64,6 +65,11 @@ public class RaicesMultiplesIngreso extends AppCompatActivity implements View.On
                 break;
             case R.id.btnRaicesMultiplesProceso:
                 realizarProceso();
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_raices_multiples);
+                startActivity(help);
                 break;
         }
     }

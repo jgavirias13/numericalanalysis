@@ -3,6 +3,7 @@ package com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.metodosInt
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.Biseccion;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 import com.eafit.numericalanalysis.util.Intervalo;
 import com.eafit.numericalanalysis.util.Parser;
 
@@ -44,6 +46,7 @@ public class BiseccionIngreso extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biseccion_ingreso);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
         rbtnErrorAbsoluto = (RadioButton) findViewById(R.id.rbtnBiseccionAbsoluto);
         rbtnErrorRelativo = (RadioButton) findViewById(R.id.rbtnBiseccionRelativo);
@@ -67,6 +70,11 @@ public class BiseccionIngreso extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btnBiseccionProceso:
                 realizarProceso();
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_biseccion);
+                startActivity(help);
                 break;
         }
     }

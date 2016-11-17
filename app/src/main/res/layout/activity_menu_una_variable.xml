@@ -32,71 +32,57 @@
             android:typeface="serif"
             android:textColor="@color/botonTexto"/>
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="@string/entrar_funciones"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:id="@+id/btnIngresoFunciones"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp" />
 
-            <Button
-                android:text="@string/entrar_funciones"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnIngresoFunciones"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp" />
-
-            <Button
-                android:text="@string/valores_iniciales"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnValoresIniciales"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_marginTop="1dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="@string/valores_iniciales"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:id="@+id/btnValoresIniciales"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"/>
 
-            <Button
-                android:text="@string/metodos_intervalos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnMetodosIntervalos"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"/>
+        <Button
+            android:text="@string/metodos_intervalos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMetodosIntervalos"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
 
-            <Button
-                android:text="@string/metodos_abiertos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnMetodosAbiertos"
-                android:layout_weight="1"
-                android:background="@drawable/diseno_boton"
-                android:textColor="@color/botonTexto"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"/>
+        <Button
+            android:text="@string/metodos_abiertos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMetodosAbiertos"
+            android:layout_weight="0"
+            android:background="@drawable/diseno_boton"
+            android:textColor="@color/botonTexto"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
 
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -19,6 +19,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionNoSoluble;
 import com.eafit.numericalanalysis.metodos.sistemasEcuaciones.Crout;
 import com.eafit.numericalanalysis.metodos.sistemasEcuaciones.FactorizacionGaussiana;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 
 public class IngresoFactorizacionCrout extends AppCompatActivity implements View.OnClickListener{
 
@@ -35,6 +36,7 @@ public class IngresoFactorizacionCrout extends AppCompatActivity implements View
         txtTitulo = (TextView) findViewById(R.id.txtGaussTitulo);
         btnCalcular = (Button) findViewById(R.id.btnCalcularGauss);
         btnCalcular.setOnClickListener(this);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
         EstadoEcuaciones estado = EstadoEcuaciones.solicitarEstado();
         double[][] a = estado.getA();
@@ -86,7 +88,11 @@ public class IngresoFactorizacionCrout extends AppCompatActivity implements View
                     error(res.getString(R.string.error_sistema_no_soluble));
                 }
                 break;
-
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_crout);
+                startActivity(help);
+                break;
         }
     }
 

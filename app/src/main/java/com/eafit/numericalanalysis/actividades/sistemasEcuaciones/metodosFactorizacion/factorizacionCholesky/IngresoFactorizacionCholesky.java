@@ -20,6 +20,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionNoSoluble;
 import com.eafit.numericalanalysis.metodos.sistemasEcuaciones.Cholesky;
 import com.eafit.numericalanalysis.metodos.sistemasEcuaciones.FactorizacionGaussiana;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 
 public class IngresoFactorizacionCholesky extends AppCompatActivity implements View.OnClickListener{
 
@@ -36,6 +37,7 @@ public class IngresoFactorizacionCholesky extends AppCompatActivity implements V
         txtTitulo = (TextView) findViewById(R.id.txtGaussTitulo);
         btnCalcular = (Button) findViewById(R.id.btnCalcularGauss);
         btnCalcular.setOnClickListener(this);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
         EstadoEcuaciones estado = EstadoEcuaciones.solicitarEstado();
         double[][] a = estado.getA();
@@ -90,7 +92,11 @@ public class IngresoFactorizacionCholesky extends AppCompatActivity implements V
                     error(res.getString(R.string.error_no_reales));
                 }
                 break;
-
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id", R.string.help_cholesky);
+                startActivity(help);
+                break;
         }
     }
 

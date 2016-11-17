@@ -14,6 +14,8 @@ import android.widget.Button;
 import com.eafit.numericalanalysis.R;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.EstadoFunciones;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.IngresoFunciones;
+import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Graficador;
 
 public class ValoresIniciales extends AppCompatActivity implements View.OnClickListener{
 
@@ -35,7 +37,8 @@ public class ValoresIniciales extends AppCompatActivity implements View.OnClickL
             case R.id.btnGraficar:
                 if(!comprobarFunciones()) error();
                 else{
-                    Intent nuevaActividad = new Intent(this, Graficar.class);
+                    Comunicacion.send(EstadoFunciones.solicitarEstado().getFuncion_f());
+                    Intent nuevaActividad = new Intent(this, Graficador.class);
                     startActivity(nuevaActividad);
                 }
                 break;

@@ -73,8 +73,15 @@
             android:name=".actividades.interpolacion.ingresoPuntos.IngresoPuntos"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".actividades.interpolacion.newton.IngresoNewton" />
-        <activity android:name=".actividades.interpolacion.lagrange.IngresoLagrange"
-            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".actividades.interpolacion.lagrange.IngresoLagrange"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".actividades.derivacion.MenuDerivacion" />
+        <activity android:name=".actividades.derivacion.tresPuntos.IngresoTresPuntos" />
+        <activity android:name=".actividades.derivacion.dosPuntos.IngresoDosPuntos" />
+        <activity android:name=".actividades.derivacion.cincoPuntos.IngresoCincoPuntos" />
+        <activity android:name=".util.Help" />
+        <activity android:name=".util.Graficador"></activity>
     </application>
 
 </manifest>

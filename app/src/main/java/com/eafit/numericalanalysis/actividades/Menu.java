@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.eafit.numericalanalysis.actividades.derivacion.MenuDerivacion;
 import com.eafit.numericalanalysis.actividades.interpolacion.MenuInterpolacion;
 import com.eafit.numericalanalysis.actividades.sistemasEcuaciones.MenuSistemasEcuaciones;
 import com.eafit.numericalanalysis.actividades.ecuacionesUnaVariable.MenuUnaVariable;
@@ -21,6 +22,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
         findViewById(R.id.btnUnaVariable).setOnClickListener(this);
         findViewById(R.id.btnSistemasEcuaciones).setOnClickListener(this);
         findViewById(R.id.btnInterpolacion).setOnClickListener(this);
+        findViewById(R.id.btnDerivacion).setOnClickListener(this);
         findViewById(R.id.btnSalir).setOnClickListener(this);
     }
 
@@ -39,6 +41,9 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
             case R.id.btnInterpolacion:
                 interpolacion(view);
                 break;
+            case R.id.btnDerivacion:
+                derivacion(view);
+                break;
         }
     }
 
@@ -54,6 +59,11 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
 
     public void interpolacion(View v){
         Intent nuevaActividad = new Intent(this, MenuInterpolacion.class);
+        startActivity(nuevaActividad);
+    }
+
+    public void derivacion(View v){
+        Intent nuevaActividad = new Intent(this, MenuDerivacion.class);
         startActivity(nuevaActividad);
     }
     public void salir(View v){

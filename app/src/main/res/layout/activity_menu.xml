@@ -16,7 +16,7 @@
         android:id="@+id/textView2"
         android:textSize="36sp"
         android:textAlignment="gravity"
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:textAllCaps="false"
         android:gravity="center"
         android:textStyle="italic"
@@ -46,6 +46,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnInterpolacion"
+        android:layout_weight="1"
+        android:background="@drawable/diseno_boton"
+        android:textColor="@color/botonTexto"/>
+
+    <Button
+        android:text="@string/derivacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDerivacion"
         android:layout_weight="1"
         android:background="@drawable/diseno_boton"
         android:textColor="@color/botonTexto"/>

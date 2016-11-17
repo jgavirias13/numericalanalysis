@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ingreso_cinco_puntos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
+    tools:context="com.eafit.numericalanalysis.actividades.derivacion.cincoPuntos.IngresoCincoPuntos">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:background="@drawable/formulario">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:text="@string/x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView27"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:text="@string/y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView26"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto1X"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto1Y"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto2X"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto2Y"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto3X"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto3Y"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto4X"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto4Y"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto5X"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/punto5Y"
+                    android:layout_weight="1"
+                    android:theme="@style/EstiloTextField"/>
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:text="@string/encima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbtnEncima"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:text="@string/centro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbtnCentro"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="@string/debajo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbtnDebajo"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <Button
+                android:text="@string/calcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCalcular"
+                android:background="@drawable/diseno_boton"
+                android:textColor="@color/botonTexto"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/formulario"
+            android:visibility="invisible"
+            android:id="@+id/layoutRespuesta">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtRespuesta" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

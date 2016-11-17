@@ -23,6 +23,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionIteraciones;
 import com.eafit.numericalanalysis.excepciones.ExcepcionParser;
 import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.BusquedasIncrementales;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 import com.eafit.numericalanalysis.util.Intervalo;
 import com.eafit.numericalanalysis.util.Parser;
 
@@ -40,7 +41,7 @@ public class BusquedaIncremental extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_busqueda_incremental);
-
+        findViewById(R.id.btnHelp).setOnClickListener(this);
         this.edtDelta = (EditText) findViewById(R.id.edtDelta);
         this.edtIteraciones = (EditText) findViewById(R.id.edtIteraciones);
         this.edtX0 = (EditText) findViewById(R.id.edtX0);
@@ -61,6 +62,11 @@ public class BusquedaIncremental extends AppCompatActivity implements View.OnCli
             case R.id.btnProcesoBusquedas:
                 Intent nuevaActividad = new Intent(this, ProcesoBusqueda.class);
                 startActivity(nuevaActividad);
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_busquedas);
+                startActivity(help);
                 break;
         }
     }

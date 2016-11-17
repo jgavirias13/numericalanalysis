@@ -23,6 +23,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionRaiz;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.metodos.ecuacionesUnaVariable.PuntoFijo;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 import com.eafit.numericalanalysis.util.Intervalo;
 import com.eafit.numericalanalysis.util.Parser;
 
@@ -42,7 +43,7 @@ public class PuntoFijoIngreso extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_punto_fijo_ingreso);
-
+        findViewById(R.id.btnHelp).setOnClickListener(this);
         rbtnErrorAbsoluto = (RadioButton) findViewById(R.id.rbtnPuntoFijoAbsoluto);
         rbtnErrorRelativo = (RadioButton) findViewById(R.id.rbtnPuntoFijoRelativo);
         edtX0 = (EditText) findViewById(R.id.edtPuntoFijoX0);
@@ -64,6 +65,11 @@ public class PuntoFijoIngreso extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btnPuntoFijoProceso:
                 realizarProceso();
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id", R.string.help_punto_fijo);
+                startActivity(help);
                 break;
         }
     }

@@ -1,6 +1,7 @@
 package com.eafit.numericalanalysis.actividades.interpolacion.lagrange;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import com.eafit.numericalanalysis.estructuras.SalidaNewtonInterpolacion;
 import com.eafit.numericalanalysis.metodos.interpolacion.Lagrange;
 import com.eafit.numericalanalysis.metodos.interpolacion.LagrangeCalculo;
 import com.eafit.numericalanalysis.metodos.interpolacion.Newton;
+import com.eafit.numericalanalysis.util.Help;
 
 public class IngresoLagrange extends AppCompatActivity implements View.OnClickListener{
 
@@ -33,6 +35,7 @@ public class IngresoLagrange extends AppCompatActivity implements View.OnClickLi
         txtCalculo = (TextView) findViewById(R.id.txtEvaluar);
         EstadoPuntos estado = EstadoPuntos.solicitarEstado();
         findViewById(R.id.btnEvaluar).setOnClickListener(this);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
 
         x = new double[estado.getnPuntos()];
@@ -63,6 +66,11 @@ public class IngresoLagrange extends AppCompatActivity implements View.OnClickLi
                     double respuesta = LagrangeCalculo.evaluar(x,y,xValor);
                     txtCalculo.setText(String.format("y = %.14f",respuesta));
                 }
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id",R.string.help_lagrange);
+                startActivity(help);
                 break;
         }
     }

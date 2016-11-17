@@ -58,14 +58,29 @@
             </LinearLayout>
         </ScrollView>
 
-        <Button
-            android:text="@string/calcular"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnCalcularGauss"
-            android:layout_weight="0"
-            android:background="@drawable/diseno_boton"
-            android:textColor="@color/botonTexto"
-            android:layout_marginTop="10dp" />
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <Button
+                android:text="@string/help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnHelp"
+                android:layout_weight="1"
+                android:background="@drawable/diseno_boton"
+                android:textColor="@color/botonTexto"
+                android:layout_marginTop="10dp" />
+            <Button
+                android:text="@string/calcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCalcularGauss"
+                android:layout_weight="1"
+                android:background="@drawable/diseno_boton"
+                android:textColor="@color/botonTexto"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

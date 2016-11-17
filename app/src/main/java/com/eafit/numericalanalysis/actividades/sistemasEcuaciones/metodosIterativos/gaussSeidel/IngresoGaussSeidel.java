@@ -22,6 +22,7 @@ import com.eafit.numericalanalysis.excepciones.ExcepcionLambda;
 import com.eafit.numericalanalysis.excepciones.ExcepcionTolerancia;
 import com.eafit.numericalanalysis.metodos.sistemasEcuaciones.GaussSeidel;
 import com.eafit.numericalanalysis.util.Comunicacion;
+import com.eafit.numericalanalysis.util.Help;
 
 import java.util.ArrayList;
 
@@ -40,6 +41,7 @@ public class IngresoGaussSeidel extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_ingreso_gauss_seidel);
         findViewById(R.id.btnCalcular).setOnClickListener(this);
         findViewById(R.id.btnProceso).setOnClickListener(this);
+        findViewById(R.id.btnHelp).setOnClickListener(this);
 
         listaValores = (ListView) findViewById(R.id.listValores);
         edtIteraciones = (EditText) findViewById(R.id.edtIteraciones);
@@ -107,6 +109,11 @@ public class IngresoGaussSeidel extends AppCompatActivity implements View.OnClic
             case R.id.btnProceso:
                 Intent proceso = new Intent(this, ProcesoGaussSeidel.class);
                 startActivity(proceso);
+                break;
+            case R.id.btnHelp:
+                Intent help = new Intent(this, Help.class);
+                help.putExtra("id", R.string.help_gauss_seidel);
+                startActivity(help);
                 break;
         }
     }

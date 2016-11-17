@@ -46,33 +46,36 @@ public class MenuEliminacionGussiana extends AppCompatActivity implements View.O
             case R.id.btnPivoteoParcial:
                 if(EstadoEcuaciones.solicitarEstado().getA() == null){
                     Resources res = getResources();
-                    String mensaje = res.getString(R.string.error_sistema_no_soluble);
+                    String mensaje = res.getString(R.string.error_matriz);
                     error(mensaje);
                 }else {
                     nuevaActivity = new Intent(this, IngresoPivoteoParcial.class);
                     startActivity(nuevaActivity);
-                    break;
+
                 }
+                break;
             case R.id.btnPivoteoTotal:
                 if(EstadoEcuaciones.solicitarEstado().getA() == null){
                     Resources res = getResources();
-                    String mensaje = res.getString(R.string.error_sistema_no_soluble);
+                    String mensaje = res.getString(R.string.error_matriz);
                     error(mensaje);
                 }else {
                     nuevaActivity = new Intent(this, IngresoPivoteoTotal.class);
                     startActivity(nuevaActivity);
-                    break;
+
                 }
+                break;
             case R.id.btnPivoteoEscalonado:
                 if(EstadoEcuaciones.solicitarEstado().getA() == null){
                     Resources res = getResources();
-                    String mensaje = res.getString(R.string.error_sistema_no_soluble);
+                    String mensaje = res.getString(R.string.error_matriz);
                     error(mensaje);
                 }else {
                     nuevaActivity = new Intent(this, IngresoPivoteoEscalonado.class);
                     startActivity(nuevaActivity);
-                    break;
+
                 }
+                break;
         }
     }
 

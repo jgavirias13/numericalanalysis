@@ -1,92 +1,91 @@
 <resources>
     <string name="app_name">NumAn</string>
     <string name="titulo_menu">Numerical Analysis</string>
-    <string name="una_variable">Ecuaciones De Una Variable</string>
-    <string name="sistemas_ecuaciones">Sistemas De Ecuaciones</string>
-    <string name="salir">Salir</string>
+    <string name="una_variable">One Variable Equations</string>
+    <string name="sistemas_ecuaciones">Equations Systems</string>
+    <string name="salir">Exit</string>
 
     <!-- Menu sistemas de ecuaciones -->
-    <string name="entrar_funciones">Entrar funciones</string>
-    <string name="metodos_intervalos">Metodos por intervalos</string>
-    <string name="metodos_abiertos">Metodos abiertos</string>
-    <string name="valores_iniciales">Determinar valores iniciales</string>
+    <string name="entrar_funciones">Enter functions</string>
+    <string name="metodos_intervalos">Interval methods</string>
+    <string name="metodos_abiertos">Open methods</string>
+    <string name="valores_iniciales">Determinate initial values</string>
     <!-- Ingreso de funciones -->
     <string name="funcion_f">f(x)</string>
     <string name="derivada_f">f\'(x)</string>
     <string name="derivada2_f">f\'\'(x)</string>
     <string name="funcion_g">g(x)</string>
-    <string name="hint_f">Ingrese f(x)</string>
-    <string name="hint_g">Ingrese g(x)</string>
-    <string name="hint_derivada_f">Ingrese f\'(x)</string>
-    <string name="hint_derivada2_f">Ingrese f\'\'(x)</string>
-    <string name="guardar">Guardar</string>
-    <string name="limpiar">Limpiar</string>
+    <string name="hint_f">Enter f(x)</string>
+    <string name="hint_g">Enter g(x)</string>
+    <string name="hint_derivada_f">Enter f\'(x)</string>
+    <string name="hint_derivada2_f">Enter f\'\'(x)</string>
+    <string name="guardar">Save</string>
+    <string name="limpiar">Clean</string>
     <!--Valores inciales -->
-    <string name="graficar">Graficar</string>
-    <string name="busqueda_incremental">Busqueda incremental</string>
+    <string name="graficar">Graph</string>
+    <string name="busqueda_incremental">Incremental Search</string>
     <string name="descripcion_valores_inciales">
-        A través de estos métodos podrás determinar valores iniciales óptimos para utilizarlos en los métodos que solucionarán la ecuación
+        Through these methods you can determine optimal initial values for use in methods that will solve equation
     </string>
-    <string name="error_funcion_f">Error, no se ha ingresado la función f(x)</string>
-    <string name="ingresar">Ingresar</string>
-    <string name="cancelar">Cancelar</string>
-    <string name="error_texto">Error en </string>
+    <string name="error_funcion_f">Error, function f(x) has not been entered</string>
+    <string name="ingresar">Enter</string>
+    <string name="cancelar">Cancel</string>
+    <string name="error_texto">Error in </string>
     <!--Busquedas Incrementales -->
-    <string name="datos">Datos:</string>
+    <string name="datos">Data:</string>
     <string name="x0">X0</string>
     <string name="delta">Delta</string>
-    <string name="iteraciones">Iteraciones</string>
-    <string name="calcular">Calcular</string>
-    <string name="solucion">Solucion:</string>
-    <string name="proceso">Mostrar Proceso</string>
-    <string name="respuesta">Respuesta</string>
-    <string name="respuesta_busquedas_raiz">Se encontro raiz en</string>
+    <string name="iteraciones">Iterations</string>
+    <string name="calcular">Calculate</string>
+    <string name="solucion">Solution:</string>
+    <string name="proceso">Show process</string>
+    <string name="respuesta">Answer</string>
+    <string name="respuesta_busquedas_raiz">Found root in</string>
     <string name="n">n</string>
     <string name="x1">X1</string>
     <string name="y0">Y0</string>
 
     <!-- Errores de excepciones -->
-    <string name="error_intervalo">Error, no se encontro ningun intervalo</string>
-    <string name="error_delta">Error, delta debe ser diferente de cero</string>
-    <string name="error_iteraciones">Error, las iteraciones deben ser mayores a cero</string>
-    <string name="error_parser">Error al ejecutar la funcion</string>
-    <string name="error_evaluacion">Error en una operacion de la funcion</string>
-    <string name="error_tolerancia">Error, la tolerancia debe ser mayor o igual a cero</string>
-    <string name="error_intervalo_malo">Error, no se puede asegurar la existencia de la raiz en el intervalo</string>
-    <string name="error_raiz">Error, no se pudo encontrar una raiz</string>
+    <string name="error_intervalo">Error, no one interval was found</string>
+    <string name="error_delta">Error, delta must be different from zero</string>
+    <string name="error_iteraciones">Error, the iterations must be greater than zero</string>
+    <string name="error_parser">Error executing function</string>
+    <string name="error_evaluacion">Error in a function operation</string>
+    <string name="error_tolerancia">Error, the tolerance must be greater than or equal to zero</string>
+    <string name="error_intervalo_malo">Error, can not assure the existence of the root in the interval</string>
+    <string name="error_raiz">Error, could not find a root</string>
 
     <!-- Metodos por intervalos -->
     <string name="descripcion_metodos_intervalos">
-        Los siguientes son métodos que permiten determinar las raices de una ecuación de una variable, partiendo de un intervalo
-        que contenga una raiz. Son métodos convergentes.
+        The following are methods to determine the roots of an equation of a variable, starting from an interval
+        that contains a root. They are convergent methods.
     </string>
-    <string name="biseccion">Bisección</string>
-    <string name="regla_falsa">Regla Falsa</string>
+    <string name="biseccion">Bisection</string>
+    <string name="regla_falsa">False Rule</string>
     <string name="xi">Xi</string>
     <string name="xs">Xs</string>
     <string name="xm">Xm</string>
     <string name="fxm">f(Xm)</string>
-    <string name="error_absoluto">Error Absoluto</string>
-    <string name="error_relativo">Error Relativo</string>
-    <string name="tolerancia">Tolerancia</string>
+    <string name="error_absoluto">Absolute error</string>
+    <string name="error_relativo">Relative error</string>
+    <string name="tolerancia">Tolerance</string>
     <string name="respuesta_biseccion">error</string>
     <string name="respuesta_regla_falsa">error</string>
     <string name="error">Error</string>
-    <string name="error_datos">Error, ingrese todos los datos</string>
+    <string name="error_datos">Error, enter all data</string>
 
     <!-- Metodos abiertos -->
     <string name="descripcion_metodos_abiertos">
-        Los siguientes son métodos que permiten determinar las raices de una ecuacion de una variable, estos metodos son rapidos
-        pero no siempre convergen
+        The following are methods to determine the roots of an equation of a variable, these methods are fast but do not always converge
     </string>
-    <string name="punto_fijo">Punto Fijo</string>
+    <string name="punto_fijo">Fixed Point</string>
     <string name="newton">Newton</string>
-    <string name="secante">Secante</string>
-    <string name="raices_multiples">Raices Multiples</string>
-    <string name="error_punto_fijo">Error, debe de ingresar f(x) y g(x)</string>
-    <string name="error_newton">Error, debe de ingresar f(x) y f\'(x)</string>
-    <string name="error_secante">Error, debe de ingresar f(x)</string>
-    <string name="error_raices_multiples">Error, se debe ingresar f(x), f\'(x) y f\'\'(x)</string>
+    <string name="secante">Secant</string>
+    <string name="raices_multiples">Multiple Roots</string>
+    <string name="error_punto_fijo">Error, you must enter f(x) and g(x)</string>
+    <string name="error_newton">Error,  you must enter f(x) and f\'(x)</string>
+    <string name="error_secante">Error, you must enter f(x)</string>
+    <string name="error_raices_multiples">Error, you must enter f(x), f\'(x) and f\'\'(x)</string>
     <string name="respuesta_punto_fijo">error</string>
     <string name="x">X</string>
     <string name="fx">f(x)</string>
@@ -96,53 +95,175 @@
 
 
     <!-- Sistemas de ecuaciones -->
-    <string name="ecuaciones">Entrar ecuaciones</string>
-    <string name="gaussiana">Metodos por Eliminacion Gaussiana</string>
-    <string name="factorizacion">Metodos por Factorizacion</string>
-    <string name="iterativos">Metodos iterativos</string>
-    <string name="numero_ecuaciones">Numero de ecuaciones</string>
+    <string name="ecuaciones">Enter equations</string>
+    <string name="gaussiana">Gaussian Elimination Methods</string>
+    <string name="factorizacion">Factoring Methods</string>
+    <string name="iterativos">Iterative Methods</string>
+    <string name="numero_ecuaciones">Number of equations</string>
     <string name="aceptar">Ok</string>
-    <string name="descripcion_metodos_gaussiana">Los siguientes metodos resuelven el sistema de
-         ecuaciones por medio de eliminiación gaussiana</string>
-    <string name="gauss_simple">Eliminiación Gaussiana simple</string>
-    <string name="pivoteo_parcial">Pivoteo parcial</string>
-    <string name="pivoteo_total">Pivoteo total</string>
-    <string name="pivoteo_escalonado">Pivoteo escalonado</string>
-    <string name="titulo_matriz">Sistema de ecuaciones:</string>
-    <string name="error_matriz">Error, no se ha ingresado el sistema de ecuaciones</string>
-    <string name="error_sistema_no_soluble">Error, el sistema no se puede resolver por este metodo</string>
-    <string name="resultado">Resultado:</string>
-    <string name="anterior">Anterior</string>
-    <string name="siguiente">Siguiente</string>
-    <string name="etapa">Etapa</string>
-    <string name="cambio_fila">Cambio de fila:</string>
-    <string name="cambio_columna">Cambio de columna:</string>
-    <string name="factorizacion_simple">Eliminación gaussiana simple</string>
-    <string name="factorizacion_pivoteo">Eliminación gaussiana con pivoteo</string>
+    <string name="descripcion_metodos_gaussiana">The following methods solve the
+          Equations by Gaussian elimination</string>
+    <string name="gauss_simple">Simple Gaussian elimination</string>
+    <string name="pivoteo_parcial">Partial Pivoting</string>
+    <string name="pivoteo_total">Total Pivoting</string>
+    <string name="pivoteo_escalonado">Stepped Pivoting</string>
+    <string name="titulo_matriz">Equations System:</string>
+    <string name="error_matriz">Error, the equations system has not been entered</string>
+    <string name="error_sistema_no_soluble">Error, the system can not be solved by this method</string>
+    <string name="resultado">Answer:</string>
+    <string name="anterior">Previous</string>
+    <string name="siguiente">Next</string>
+    <string name="etapa">Stage</string>
+    <string name="cambio_fila">Row change:</string>
+    <string name="cambio_columna">Column change:</string>
+    <string name="factorizacion_simple">Simple Gaussian Elimination</string>
+    <string name="factorizacion_pivoteo">Simple Gaussian Elimination with pivoting</string>
     <string name="factorizacion_cholesky">Cholesky</string>
     <string name="factorizacion_crout">Crout</string>
     <string name="factorizacion_doolittle">Doolittle</string>
-    <string name="descripcion_metodos_factorizacion">Los siguientes metodos resuelven el sistema de
-        ecuaciones factorizando la matriz A en dos matrices L y U</string>
-    <string name="matriz_z">Matriz Z:</string>
-    <string name="error_no_reales">Error, la matriz no tiene solución en los numeros reales por este metodo</string>
+    <string name="descripcion_metodos_factorizacion">The following methods solve the
+         Equations factorizing the matrix A in two matrices L and U</string>
+    <string name="matriz_z">Matrix Z:</string>
+    <string name="error_no_reales">Error, the matrix has no solution in the real numbers by this method</string>
     <string name="lambda">Lambda</string>
-    <string name="descripcion_metodos_iterativos">Los siguientes metodos resuelven el sistema de
-        ecuaciones de forma iterativa dando nuevas aproximaciones</string>
-    <string name="jacobi">Metodo de jacobi</string>
-    <string name="gauss_seidel">Metodo de Gauss Seidel</string>
+    <string name="descripcion_metodos_iterativos">The following methods solve the system of equations iteratively giving new approximations</string>
+    <string name="jacobi">Jacobi method</string>
+    <string name="gauss_seidel">Gauss Seidel method</string>
 
     <!--Interpolacion -->
-    <string name="interpolacion">Interpolación</string>
-    <string name="puntos">Ingresar puntos</string>
-    <string name="newton_interpolacion">Metodo de Newton</string>
-    <string name="lagrange">Metodo de Lagrange</string>
-    <string name="numero_puntos">Numero de puntos</string>
+    <string name="interpolacion">Interpolation</string>
+    <string name="puntos">Enter points</string>
+    <string name="newton_interpolacion">Newton method</string>
+    <string name="lagrange">Lagrange method</string>
+    <string name="numero_puntos">Number of points</string>
     <string name="y">Y</string>
-    <string name="polinomio_interpolante">Poliniomio Interpolante:</string>
-    <string name="proceso_puntos">Proceso:</string>
-    <string name="error_lambda">Error, lambda debe ser un valor mayor a 0</string>
-    <string name="evaluar">Evaluar punto:</string>
-    <string name="calcular_btn">Calcular</string>
-    <string name="error_punto">Error, ingrese el punto</string>
+    <string name="polinomio_interpolante">Interpolating Polynomial:</string>
+    <string name="proceso_puntos">Process:</string>
+    <string name="error_lambda">Error, lambda must be grather than zero</string>
+    <string name="evaluar">Evaluate point:</string>
+    <string name="calcular_btn">Calculate</string>
+    <string name="error_punto">Error, enter the point</string>
+
+    <!--Derivacion -->
+    <string name="derivacion">Derivation</string>
+    <string name="dos_puntos">Two points</string>
+    <string name="tres_puntos">Three points</string>
+    <string name="encima">Above</string>
+    <string name="centro">In the middle</string>
+    <string name="error_puntos">Error, enter all the points</string>
+
+    <!--Helps -->
+    <string name="help_biseccion">
+        The Bisection method works with an interval containing the root. The method divides the interval into two sub intervals of equal size and evaluates the function at
+        the endpoints and the midpoint of the interval to decide a new interval of half the size of the previous. The new interval is defined by comparing the signs of
+        y1, y2 y y3, where:\n
+        y1 = f(lower end of the interval)\n
+        y2 = f(upper end of the interval)\n
+        y3 = f(midpoint)\n
+        And the midpoint is calculated:\n
+        midpoint = (upper end of the interval + lower end of the interval)/2\n
+        The new interval will be [lower end, midpoint] if the sign of y1 is different from y3 or [midpoint, upper end] if the sign of y2 is different form y3, ensuring the
+        existence of a root in the new interval. The process is performed repeatedly getting smaller interval and finding a middle point at the end that is a root.
+    </string>
+    <string name="help_regla_falsa">
+        The false-rule method It has the same characteristics and conditions that have the bisection method except how to calculate the midpoint.The difference is that it does not take the midpoint of the range, but takes as midpoint the intersection with the x axis by drawing a secant line defined by the points of the function at the endpoints. In evaluating the midpoint found and intervals, the functions must be chosen to give different signs and discard the other end having the same sign
+    </string>
+    <string name="help_punto_fijo">
+    It\'s an open method that redefines the solution of a equation. The method searches an X that don\'t change where is applied the g function\n
+		 x = g(x)\n
+    And this X will be a root for the f function\n
+    The objective is find the fixed point. The fixed point is the intersection from g(x) and y=x. In other words the fixed point is the x = g(x)
+    </string>
+    <string name="help_busquedas">
+        The goal is to locate a function in an interval containing at least one root, and is based on the intermediate value theorem, and then decide whether the root lies on [(a + b)/2] . Repeat until the interval is sufficiently small.
+        . Then evaluate the function increments. If the function when evaluated changes sign, then within the increment was used to evaluate the root exists a root.
+        To use this method function should be differentiable and continues.
+    </string>
+    <string name="help_raices_multiples">
+        Variant of Newton Method\n
+        It is used when the given function has roots in critical points, that is to say, maximum, minimum and inflection points.\n
+        The difference between this method and Newton\'s one is the way to find the X of the function.\n
+        Xn+1 = Xn - (f(Xn)f\'(Xn)/(f\'(Xn)*f\'\'(Xn)
+    </string>
+    <string name="help_newton">
+        Variant of fixed Point method\n
+        The expression x=g(x) used in fixed point method to find the X of the function, is set for:\n
+        Xn-1 = Xn - (f(Xn)/f\'(Xn))\n
+        This new expression makes the calculation to  find the next X of the function to find a possible root, later.\n
+        The Xn+1 is defined as the intersection between the X axix and the tanget rect to the curve y=f(x)s\n
+    </string>
+    <string name="help_secante">
+        The secant method is a variant of Newton\'s method requires two initial intervals. In evaluating these two initial intervals should draw a line secante and where this line the x-axis is where the new interval arises. You should perform this procedure on until   successively find some of the roots of the given function, according to the tolerance established
+    </string>
+    <string name="help_eliminacion_gaussiana">
+        Simple Gauusian Elimination:\n
+	    Given a matrix, this method performs elementary rows and cols operations til it gets a equivalent system represented by a superior triangular matrix of coefficients.\n
+	    After that,  by performing regressive substitution, the equation system variables values are found.
+    </string>
+    <string name="help_doolittle">
+        Doolittle:\n
+	    This method takes a matrix A and factorizes it into two matrices, L and U where L is a inferior triangular matrix and has only the number one in its main diagonal, and U which is a superior matrix.\n
+	    After that factorization, this method  solve the system by find the values of the next equations variables:\n
+					Lz = b and  Ux = Z\n
+	    The system is solved by progressive substitution first, and after by regressive substitution.
+    </string>
+    <string name="help_cholesky">
+        Cholesky:\n
+	    This method takes a matrix A and factorizes it into two matrices, L and U where L is a inferior triangular matrix and U which is a superior matrix.\n
+	    This method is too much better than Crout and Doolittle factorization method when A positive defined  matrix which has only  positive and different of zero values in its diagonal.\n
+						A= L(L^t)
+
+    </string>
+    <string name="help_crout">
+        Crout:\n
+        This method takes a matrix A and factorizes it into two matrices, L and U where L is a inferior triangular matrix and has only the number one in its main diagonal, and U which is a superior matrix.\n
+	    After that factorization, this method  solve the system by find the values of the next equations variables:\n
+					Lz = b and  Ux = Z\n
+	    The system is solved by progressive substitution first, and after by regressive substitution.
+    </string>
+    <string name="help_gauss_seidel">
+        Gauss Seidel:\n
+	    This method is used when, given an equations system, it\’s required to find an approximation to the real values of the variables in that system.
+	    It\’s better than Jacobi method because, it tend to an approximations in less iterations than Jacobi.
+	    First all of the matrix that describe that system must be Diagonally Dominant, to be sure that this method is going to work properly in any given case.
+	    After that transformation and with each variable clearance, Gauss Seidel method starts to perform operations to find the value of each variable.
+	    In the first iteration, Gauss Seidel uses the the initial X value and find the second X value and so on. Thus, this method takes the most recent calculated value of any variable to make the next iteration calculations.
+	    In the second iteration, this method takes the previous First X approximation to  calc a new approximation of that variable; using first X second approximation Gauss Seidel make new calculus to find new approximations to the second, third and n variable in the system.
+    </string>
+    <string name="help_jacobi">
+        Jacobi:\n
+	    This method is used when, given an equations system, it\’s required to find an approximation to the real values of the variables in that system.
+	    First all of the matrix that describe that system must be Diagonally Dominant, to be sure that Jacobi method is going to work properly in any given case.
+	    After that transformation and with each variable clearance, jacobi method starts to perform operations to find the value of each variable.
+	    In the first iteration, jacobi uses the the initial Xs values to find the first approximation, in the second iteration jacobi use the first approximation to Xs values to find the second approximation and so on!
+    </string>
+    <string name="help_pivoteo_parcial">
+        Gauusian Elimination with Parcial Pivot:\n
+	    Given a matrix, this method performs elementary rows and cols operations til it gets a equivalent system represented by a superior triangular matrix of coefficients.
+	    The main difference between this method and simple gaussian elimination one, is that in this method, in the step number K, it\’s necessary to find the major value, in absolute value, in the col and  interchange that value row, with the row which is the current pivot.
+	    By doing that operations the rounding error  is reduced and the  multiplicators have the following property
+        M(ik) menor o igual 1, para todo i, tal que k+1 menor o igual i menor o igual n
+    </string>
+    <string name="help_pivoteo_total">
+        Gauusian Elimination Total Pivot:\n
+	    Given a matrix, this method performs elementary rows and cols operations til it gets a equivalent system represented by a superior triangular matrix of coefficients.
+	    Using this method, in the step number K,  it\’s necessary to find the major value, in absolute value, in the resulting submatrix after  skip the rows  F1 to Fk and rows C1 to  Ck-1.
+	    By doing that operations the rounding error  is reduced.
+    </string>
+    <string name="help_lagrange">
+        Lagrange:\n
+	    Given n + 1 point, each Lk (x) is a polynomial raiced to maximum permited power, n\n
+	    At the evaluation of the Xi points it\'s possible to have:\n
+			Lk(xi) = 1 if k = i\n
+					 0 if k != i
+    </string>
+    <string name="help_newton_interpolacion">
+        Newton with Divided Differences:\n
+	    Given n + 1 points the calculation of the next divided difference is:\n
+				(f(xi) - f(x(i-n)))/(xi - x(i-1))\n
+	    where n is the current current divided diference (first difference, second difference... n difference)
+    </string>
+    <string name="help">help</string>
+    <string name="cinco_punos">Five points</string>
+    <string name="debajo">Below</string>
 </resources>
